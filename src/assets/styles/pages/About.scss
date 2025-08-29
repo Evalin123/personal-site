@@ -1,0 +1,139 @@
+@use '../variables';
+@use '../mixins';
+
+.about {
+  min-height: calc(100vh - 120px);
+  padding: variables.$spacing-xl 0;
+
+  &__hero {
+    text-align: center;
+    margin-bottom: variables.$spacing-3xl;
+    padding: variables.$spacing-2xl 0;
+  }
+
+  &__title {
+    margin-bottom: variables.$spacing-md;
+  }
+
+  &__subtitle {
+    font-size: variables.$font-size-xl;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__intro {
+    margin-bottom: variables.$spacing-3xl;
+
+    h2 {
+      color: var(--color-primary);
+      margin-bottom: variables.$spacing-lg;
+    }
+
+    p {
+      font-size: variables.$font-size-lg;
+      line-height: 1.7;
+      margin-bottom: variables.$spacing-lg;
+    }
+  }
+
+  &__skills {
+    margin-bottom: variables.$spacing-3xl;
+
+    h2 {
+      text-align: center;
+      margin-bottom: variables.$spacing-2xl;
+      color: var(--color-text-primary);
+    }
+  }
+
+  &__skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: variables.$spacing-xl;
+
+    @include mixins.respond-to(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixins.respond-to(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__skill-category {
+    @include mixins.card;
+    padding: variables.$spacing-xl;
+
+    h3 {
+      color: var(--color-primary);
+      margin-bottom: variables.$spacing-md;
+      font-size: variables.$font-size-xl;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      padding: variables.$spacing-sm 0;
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-text-secondary);
+      transition: color variables.$transition-fast;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        color: var(--color-text-primary);
+      }
+    }
+  }
+
+  &__values {
+    h2 {
+      text-align: center;
+      margin-bottom: variables.$spacing-2xl;
+      color: var(--color-text-primary);
+    }
+  }
+
+  &__values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: variables.$spacing-lg;
+
+    @include mixins.respond-to(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__value-card {
+    @include mixins.card;
+    padding: variables.$spacing-xl;
+    text-align: center;
+    transition: transform variables.$transition-normal;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    h3 {
+      color: var(--color-primary);
+      margin-bottom: variables.$spacing-md;
+    }
+
+    p {
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+  }
+}

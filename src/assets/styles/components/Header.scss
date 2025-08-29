@@ -1,0 +1,122 @@
+@use '../variables';
+@use '../mixins';
+
+.header {
+  background-color: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: variables.$z-index-sticky;
+  backdrop-filter: blur(8px);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: variables.$spacing-md 0;
+    min-height: 60px;
+  }
+
+  &__logo {
+    font-size: variables.$font-size-2xl;
+    font-weight: variables.$font-weight-bold;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color variables.$transition-fast;
+
+    &:hover {
+      color: var(--color-primary-hover);
+      text-decoration: none;
+    }
+
+    @include mixins.focus-visible;
+  }
+
+  &__nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    @include mixins.respond-to(md) {
+      justify-content: flex-start;
+      margin-left: variables.$spacing-2xl;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: variables.$spacing-sm;
+
+    @include mixins.respond-to(md) {
+      gap: variables.$spacing-lg;
+    }
+  }
+
+  &__nav-item {
+    margin: 0;
+  }
+
+  &__nav-link {
+    display: inline-block;
+    padding: variables.$spacing-sm variables.$spacing-md;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-weight: variables.$font-weight-medium;
+    border-radius: variables.$border-radius-md;
+    transition: all variables.$transition-fast;
+    position: relative;
+
+    &:hover {
+      color: var(--color-text-primary);
+      background-color: var(--color-bg-secondary);
+      text-decoration: none;
+    }
+
+    &--active {
+      color: var(--color-primary);
+      background-color: var(--color-bg-secondary);
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: variables.$spacing-md;
+        right: variables.$spacing-md;
+        height: 2px;
+        background-color: var(--color-primary);
+        border-radius: 1px;
+      }
+    }
+
+    @include mixins.focus-visible;
+  }
+
+  &__theme-toggle {
+    @include mixins.button-ghost;
+    padding: variables.$spacing-sm;
+    font-size: variables.$font-size-lg;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid var(--color-border);
+    transition: all variables.$transition-fast;
+
+    &:hover {
+      background-color: var(--color-bg-secondary);
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    @include mixins.focus-visible;
+  }
+}

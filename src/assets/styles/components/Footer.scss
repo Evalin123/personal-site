@@ -1,0 +1,60 @@
+@use '../variables';
+@use '../mixins';
+
+.footer {
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+  margin-top: auto;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: variables.$spacing-xl 0;
+    gap: variables.$spacing-md;
+
+    @include mixins.respond-to(md) {
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+
+  &__info {
+    text-align: center;
+
+    @include mixins.respond-to(md) {
+      text-align: left;
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+    color: var(--color-text-tertiary);
+    font-size: variables.$font-size-sm;
+  }
+
+  &__links {
+    display: flex;
+    gap: variables.$spacing-lg;
+    align-items: center;
+  }
+
+  &__link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: variables.$font-size-sm;
+    font-weight: variables.$font-weight-medium;
+    padding: variables.$spacing-xs variables.$spacing-sm;
+    border-radius: variables.$border-radius-sm;
+    transition: all variables.$transition-fast;
+
+    &:hover {
+      color: var(--color-primary);
+      background-color: var(--color-bg-primary);
+      text-decoration: none;
+    }
+
+    @include mixins.focus-visible;
+  }
+}

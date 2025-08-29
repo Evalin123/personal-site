@@ -1,0 +1,48 @@
+# Project guardrails for Cursor
+
+## Stack
+
+- Vite + React + TypeScript
+- ESLint (flat config) + Prettier
+- SASS with BEM naming convention
+- React Router for navigation
+- Prefer functional components + hooks
+- Keep components small and typed (no "any" unless justified)
+
+## Code Style
+
+- Follow Prettier; no manual style rules that conflict with Prettier
+- Use named exports when practical
+- Strict TS: no implicit any; avoid tslint-like disable unless justified in comment
+- Enforce accessibility via eslint-plugin-jsx-a11y
+- use Type not Interface
+- React components use PascalCase
+- folder name use camelCase or kebab-case
+- constant use UPPER_SNAKE_CASE
+- function and variable use camelCase
+
+## Architecture
+
+- UI components put in `src/components/`
+- Pages put in `src/pages/`
+- Internal shared utilities put in `src/utils/`
+- External libraries and contexts put in `src/lib/`
+- Type definitions put in `src/types/`
+- Styles put in `src/styles/`
+- Avoid deep prop drilling; use context only when needed
+
+## Performance
+
+- React.memo for pure visual components
+- useCallback/useMemo for stable refs in heavy lists
+- Code-split routes or big chunks
+
+## Testing (optional later)
+
+- Plan for vitest + @testing-library/react
+
+## DevEx
+
+- Every new file must pass `pnpm run lint` and `pnpm tsc`
+- Dark mode support with system preference detection
+- Responsive design for all screen sizes
