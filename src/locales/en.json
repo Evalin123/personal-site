@@ -1,7 +1,8 @@
 {
   "navigation": {
     "home": "Home",
-    "about": "About"
+    "about": "About",
+    "projects": "Projects"
   },
   "home": {
     "title": "Hello, I'm {{name}}",
@@ -100,5 +101,11 @@
   "language": {
     "switchToZh": "中文",
     "switchToEn": "English"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Explore my side projects and open-source contributions",
+    "openProject": "Open project",
+    "viewOnGithub": "View on GitHub"
   }
 }

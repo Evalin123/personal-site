@@ -44,6 +44,15 @@ const Header = () => {
                   {t('navigation.about')}
                 </Link>
               </li>
+              <li className="header__nav-item">
+                <Link
+                  to="/projects"
+                  className={`header__nav-link ${isActive('/projects') ? 'header__nav-link--active' : ''}`}
+                  aria-current={isActive('/projects') ? 'page' : undefined}
+                >
+                  {t('navigation.projects')}
+                </Link>
+              </li>
             </ul>
           </nav>
 
