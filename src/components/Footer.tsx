@@ -1,6 +1,9 @@
 import '../assets/styles/components/Footer.scss';
 
+import { useTranslation } from 'react-i18next';
+
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -8,7 +11,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer__content">
           <div className="footer__info">
-            <p className="footer__copyright">© {currentYear} Eva. All rights reserved.</p>
+            <p className="footer__copyright">{t('footer.copyright', { year: currentYear })}</p>
           </div>
 
           <div className="footer__links">
@@ -19,7 +22,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
             >
-              GitHub
+              {t('footer.links.github')}
             </a>
             <a
               href="https://linkedin.com"
@@ -28,10 +31,10 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
             >
-              LinkedIn
+              {t('footer.links.linkedin')}
             </a>
             <a href="mailto:hello@eva.dev" className="footer__link" aria-label="Email Contact">
-              Email
+              {t('footer.links.email')}
             </a>
           </div>
         </div>

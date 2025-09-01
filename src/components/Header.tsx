@@ -1,11 +1,14 @@
 import '../assets/styles/components/Header.scss';
 
+import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
 import { useTheme } from '../lib/useTheme';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
+  const { t } = useTranslation();
   const location = useLocation();
 
   const isActive = (path: string): boolean => {
@@ -28,7 +31,7 @@ const Header = () => {
                   className={`header__nav-link ${isActive('/') ? 'header__nav-link--active' : ''}`}
                   aria-current={isActive('/') ? 'page' : undefined}
                 >
-                  Home
+                  {t('navigation.home')}
                 </Link>
               </li>
               <li className="header__nav-item">
@@ -37,20 +40,24 @@ const Header = () => {
                   className={`header__nav-link ${isActive('/about') ? 'header__nav-link--active' : ''}`}
                   aria-current={isActive('/about') ? 'page' : undefined}
                 >
-                  About
+                  {t('navigation.about')}
                 </Link>
               </li>
             </ul>
           </nav>
 
-          <button
-            className="header__theme-toggle"
-            onClick={toggleTheme}
-            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-            type="button"
-          >
-            {theme === 'light' ? '🌙' : '☀️'}
-          </button>
+          <div>
+            <button
+              className="header__theme-toggle"
+              onClick={toggleTheme}
+              aria-label={theme === 'light' ? t('theme.switchToDark') : t('theme.switchToLight')}
+              type="button"
+            >
+              {theme === 'light' ? '🌙' : '☀️'}
+            </button>
+
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </header>

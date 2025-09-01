@@ -1,0 +1,104 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About"
+  },
+  "home": {
+    "title": "Hello, I'm {{name}}",
+    "subtitle": "A passionate developer creating amazing web experiences",
+    "aboutBtn": "About Me",
+    "contactBtn": "Get In Touch",
+    "whatIDo": "What I Do",
+    "features": {
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "Creating beautiful, responsive user interfaces with modern technologies"
+      },
+      "performance": {
+        "title": "Performance Optimization",
+        "description": "Building fast, efficient applications that provide excellent user experiences"
+      },
+      "fullstack": {
+        "title": "Full Stack Solutions",
+        "description": "Developing complete web applications from frontend to backend"
+      }
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Learn more about my journey, skills, and passion for development",
+    "intro": {
+      "title": "Hello, I'm Eva",
+      "paragraph1": "I'm a passionate developer with a love for creating beautiful and functional web applications. My journey in tech started several years ago, and I've been constantly learning and growing ever since.",
+      "paragraph2": "I believe in writing clean, maintainable code and creating user experiences that make a difference. When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or sharing knowledge with the developer community."
+    },
+    "skills": {
+      "title": "Skills & Technologies",
+      "frontend": {
+        "title": "Frontend",
+        "items": [
+          "React & TypeScript",
+          "HTML5 & CSS3/SASS",
+          "JavaScript (ES6+)",
+          "Responsive Design",
+          "Accessibility (a11y)"
+        ]
+      },
+      "tools": {
+        "title": "Tools & Workflow",
+        "items": [
+          "Git & GitHub",
+          "Vite & Webpack",
+          "ESLint & Prettier",
+          "Jest & Testing Library",
+          "Figma & Design Systems"
+        ]
+      },
+      "backend": {
+        "title": "Backend",
+        "items": [
+          "Node.js & Express",
+          "Python & Django",
+          "PostgreSQL & MongoDB",
+          "RESTful APIs",
+          "GraphQL"
+        ]
+      }
+    },
+    "values": {
+      "title": "What I Value",
+      "quality": {
+        "title": "Quality Code",
+        "description": "Writing clean, maintainable, and well-tested code that stands the test of time."
+      },
+      "ux": {
+        "title": "User Experience",
+        "description": "Creating intuitive and accessible experiences that users love to interact with."
+      },
+      "learning": {
+        "title": "Continuous Learning",
+        "description": "Staying updated with the latest technologies and best practices in the industry."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Working effectively with teams and contributing to a positive development culture."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Eva. All rights reserved.",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
+  },
+  "theme": {
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "language": {
+    "switchToZh": "中文",
+    "switchToEn": "English"
+  }
+}

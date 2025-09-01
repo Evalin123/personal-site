@@ -1,98 +1,82 @@
 import '../assets/styles/pages/About.scss';
 
+import { useTranslation } from 'react-i18next';
+
 const About = () => {
+  const { t } = useTranslation();
   return (
     <main className="about">
       <div className="container">
         <section className="about__hero">
-          <h1 className="about__title">About Me</h1>
-          <p className="about__subtitle">
-            Learn more about my journey, skills, and passion for development
-          </p>
+          <h1 className="about__title">{t('about.title')}</h1>
+          <p className="about__subtitle">{t('about.subtitle')}</p>
         </section>
 
         <section className="about__content">
           <div className="about__intro">
             <div className="about__text">
-              <h2>Hello, I'm Eva</h2>
-              <p>
-                I'm a passionate developer with a love for creating beautiful and functional web
-                applications. My journey in tech started several years ago, and I've been constantly
-                learning and growing ever since.
-              </p>
-              <p>
-                I believe in writing clean, maintainable code and creating user experiences that
-                make a difference. When I'm not coding, you can find me exploring new technologies,
-                contributing to open source projects, or sharing knowledge with the developer
-                community.
-              </p>
+              <h2>{t('about.intro.title')}</h2>
+              <p>{t('about.intro.paragraph1')}</p>
+              <p>{t('about.intro.paragraph2')}</p>
             </div>
           </div>
 
           <div className="about__skills">
-            <h2>Skills & Technologies</h2>
+            <h2>{t('about.skills.title')}</h2>
             <div className="about__skills-grid">
               <div className="about__skill-category">
-                <h3>Frontend</h3>
+                <h3>{t('about.skills.frontend.title')}</h3>
                 <ul>
-                  <li>React & TypeScript</li>
-                  <li>HTML5 & CSS3/SASS</li>
-                  <li>JavaScript (ES6+)</li>
-                  <li>Responsive Design</li>
-                  <li>Accessibility (a11y)</li>
+                  {(t('about.skills.frontend.items', { returnObjects: true }) as string[]).map(
+                    (item: string, index: number) => (
+                      <li key={index}>{item}</li>
+                    )
+                  )}
                 </ul>
               </div>
 
               <div className="about__skill-category">
-                <h3>Tools & Workflow</h3>
+                <h3>{t('about.skills.tools.title')}</h3>
                 <ul>
-                  <li>Git & GitHub</li>
-                  <li>Vite & Webpack</li>
-                  <li>ESLint & Prettier</li>
-                  <li>Jest & Testing Library</li>
-                  <li>Figma & Design Systems</li>
+                  {(t('about.skills.tools.items', { returnObjects: true }) as string[]).map(
+                    (item: string, index: number) => (
+                      <li key={index}>{item}</li>
+                    )
+                  )}
                 </ul>
               </div>
 
               <div className="about__skill-category">
-                <h3>Backend</h3>
+                <h3>{t('about.skills.backend.title')}</h3>
                 <ul>
-                  <li>Node.js & Express</li>
-                  <li>Python & Django</li>
-                  <li>PostgreSQL & MongoDB</li>
-                  <li>RESTful APIs</li>
-                  <li>GraphQL</li>
+                  {(t('about.skills.backend.items', { returnObjects: true }) as string[]).map(
+                    (item: string, index: number) => (
+                      <li key={index}>{item}</li>
+                    )
+                  )}
                 </ul>
               </div>
             </div>
           </div>
 
           <div className="about__values">
-            <h2>What I Value</h2>
+            <h2>{t('about.values.title')}</h2>
             <div className="about__values-grid">
               <div className="about__value-card">
-                <h3>Quality Code</h3>
-                <p>
-                  Writing clean, maintainable, and well-tested code that stands the test of time.
-                </p>
+                <h3>{t('about.values.quality.title')}</h3>
+                <p>{t('about.values.quality.description')}</p>
               </div>
               <div className="about__value-card">
-                <h3>User Experience</h3>
-                <p>
-                  Creating intuitive and accessible experiences that users love to interact with.
-                </p>
+                <h3>{t('about.values.ux.title')}</h3>
+                <p>{t('about.values.ux.description')}</p>
               </div>
               <div className="about__value-card">
-                <h3>Continuous Learning</h3>
-                <p>
-                  Staying updated with the latest technologies and best practices in the industry.
-                </p>
+                <h3>{t('about.values.learning.title')}</h3>
+                <p>{t('about.values.learning.description')}</p>
               </div>
               <div className="about__value-card">
-                <h3>Collaboration</h3>
-                <p>
-                  Working effectively with teams and contributing to a positive development culture.
-                </p>
+                <h3>{t('about.values.collaboration.title')}</h3>
+                <p>{t('about.values.collaboration.description')}</p>
               </div>
             </div>
           </div>

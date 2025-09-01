@@ -1,0 +1,104 @@
+{
+  "navigation": {
+    "home": "首頁",
+    "about": "關於我"
+  },
+  "home": {
+    "title": "你好，我是 {{name}}",
+    "subtitle": "熱愛開發的工程師，致力於創造優秀的網頁體驗",
+    "aboutBtn": "關於我",
+    "contactBtn": "聯絡我",
+    "whatIDo": "我的專長",
+    "features": {
+      "frontend": {
+        "title": "前端開發",
+        "description": "使用現代技術打造美觀且響應式的使用者介面"
+      },
+      "performance": {
+        "title": "效能優化",
+        "description": "建構快速、高效的應用程式，提供優秀的使用者體驗"
+      },
+      "fullstack": {
+        "title": "全端解決方案",
+        "description": "從前端到後端的完整網頁應用程式開發"
+      }
+    }
+  },
+  "about": {
+    "title": "關於我",
+    "subtitle": "了解更多關於我的技術歷程與開發熱忱",
+    "intro": {
+      "title": "你好，我是 Eva",
+      "paragraph1": "我是一位熱愛開發的工程師，專注於創造美觀且功能完整的網頁應用程式。我的技術之旅始於幾年前，從那時起就不斷學習和成長。",
+      "paragraph2": "我相信撰寫乾淨、可維護的程式碼，並且致力於創造能夠帶來影響力的使用者體驗。當我不在寫程式時，你會發現我在探索新技術、為開源專案貢獻，或是與開發者社群分享知識。"
+    },
+    "skills": {
+      "title": "技能與技術",
+      "frontend": {
+        "title": "Frontend",
+        "items": [
+          "React & TypeScript",
+          "HTML5 & CSS3/SASS",
+          "JavaScript (ES6+)",
+          "Responsive Design",
+          "Accessibility (a11y)"
+        ]
+      },
+      "tools": {
+        "title": "Tools & Workflow",
+        "items": [
+          "Git & GitHub",
+          "Vite & Webpack",
+          "ESLint & Prettier",
+          "Jest & Testing Library",
+          "Figma & Design Systems"
+        ]
+      },
+      "backend": {
+        "title": "Backend",
+        "items": [
+          "Node.js & Express",
+          "Python & Django",
+          "PostgreSQL & MongoDB",
+          "RESTful APIs",
+          "GraphQL"
+        ]
+      }
+    },
+    "values": {
+      "title": "我重視的價值",
+      "quality": {
+        "title": "程式碼品質",
+        "description": "撰寫乾淨、可維護且經過良好測試的程式碼，經得起時間的考驗。"
+      },
+      "ux": {
+        "title": "使用者體驗",
+        "description": "創造直觀且具可及性的體驗，讓使用者樂於互動。"
+      },
+      "learning": {
+        "title": "持續學習",
+        "description": "持續關注業界最新技術和最佳實踐。"
+      },
+      "collaboration": {
+        "title": "團隊合作",
+        "description": "與團隊有效協作，為正向的開發文化做出貢獻。"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Eva. 保留所有權利。",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
+  },
+  "theme": {
+    "switchToLight": "切換為淺色模式",
+    "switchToDark": "切換為深色模式"
+  },
+  "language": {
+    "switchToZh": "中文",
+    "switchToEn": "English"
+  }
+}

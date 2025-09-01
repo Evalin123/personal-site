@@ -15,6 +15,13 @@
     justify-content: space-between;
     padding: variables.$spacing-md 0;
     min-height: 60px;
+    gap: variables.$spacing-md;
+
+    > div:last-child {
+      display: flex;
+      align-items: center;
+      gap: variables.$spacing-sm;
+    }
   }
 
   &__logo {

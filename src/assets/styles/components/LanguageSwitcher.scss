@@ -1,0 +1,46 @@
+@use '../variables';
+@use '../mixins';
+
+.language-switcher {
+  @include mixins.button-ghost;
+  display: flex;
+  align-items: center;
+  gap: variables.$spacing-xs;
+  padding: variables.$spacing-sm variables.$spacing-md;
+  font-size: variables.$font-size-sm;
+  border-radius: variables.$border-radius-md;
+  transition: all variables.$transition-fast;
+  min-width: 80px;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--color-bg-secondary);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @include mixins.focus-visible;
+
+  &__flag {
+    font-size: 1.1em;
+    line-height: 1;
+  }
+
+  &__text {
+    font-weight: variables.$font-weight-medium;
+    color: var(--color-text-secondary);
+    transition: color variables.$transition-fast;
+  }
+
+  &:hover &__text {
+    color: var(--color-text-primary);
+  }
+
+  @include mixins.respond-to(sm) {
+    min-width: 90px;
+    font-size: variables.$font-size-base;
+  }
+}
