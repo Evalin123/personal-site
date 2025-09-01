@@ -3,11 +3,12 @@ import '../assets/styles/components/Header.scss';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
-import { useTheme } from '../lib/useTheme';
+import { useThemeStore } from '../stores/themeStore';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
-  const { theme, toggleTheme } = useTheme();
+  const theme = useThemeStore((state) => state.theme);
+  const setTheme = useThemeStore((state) => state.setTheme);
   const { t } = useTranslation();
   const location = useLocation();
 
@@ -49,7 +50,7 @@ const Header = () => {
           <div>
             <button
               className="header__theme-toggle"
-              onClick={toggleTheme}
+              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
               aria-label={theme === 'light' ? t('theme.switchToDark') : t('theme.switchToLight')}
               type="button"
             >
