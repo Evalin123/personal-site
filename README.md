@@ -1,69 +1,96 @@
-# React + TypeScript + Vite
+# Eva's Personal Website 🌟
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal website! This is where I share my thoughts, showcase my projects, and connect with fellow developers.
 
-Currently, two official plugins are available:
+## ✨ What's Inside
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Home**: A warm welcome and introduction to who I am
+- **About**: My journey, skills, and what I value as a developer
+- **Projects**: Showcase of my side projects and open-source contributions
+- **Articles**: My thoughts and insights on development, technology, and more
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This website is built with modern web technologies:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite for lightning-fast development
+- **Styling**: SASS with BEM methodology
+- **Routing**: React Router for seamless navigation
+- **Internationalization**: i18next for English/Chinese support
+- **State Management**: Zustand for theme management
+- **Code Quality**: ESLint + Prettier for consistent code style
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🌙 Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Dark/Light Mode**: Toggle between themes with system preference detection
+- **Responsive Design**: Optimized for all screen sizes from mobile to desktop
+- **Multilingual**: Available in English and Traditional Chinese
+- **Accessibility**: Built with a11y best practices in mind
+- **Performance**: Fast loading with code splitting and optimization
+
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/Evalin123/personal-site.git
+
+# Navigate to the project
+cd personal-site
+
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📝 Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm preview` - Preview production build
+- `pnpm lint` - Run ESLint
+- `pnpm tsc` - Run TypeScript compiler
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🎨 Design Philosophy
+
+This website follows modern design principles:
+
+- **Clean & Minimal**: Focus on content without distractions
+- **Consistent**: Unified design language throughout all pages
+- **Interactive**: Smooth animations and hover effects
+- **Mobile-First**: Designed for mobile, enhanced for desktop
+
+## 📱 Mobile Experience
+
+The website features a responsive design with:
+
+- Hamburger menu for mobile navigation
+- Touch-friendly buttons and links
+- Optimized typography for small screens
+- Fast loading on all devices
+
+## 🌍 Connect with Me
+
+- **Medium**: [@evalin8](https://medium.com/@evalin8)
+- **GitHub**: [Evalin123](https://github.com/Evalin123)
+- **Website**: [Your Website URL]
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+Built with ❤️ using React, TypeScript, and modern web technologies.
+
+---
+
+_"Code is poetry written for machines but read by humans."_
