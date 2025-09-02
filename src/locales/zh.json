@@ -3,6 +3,7 @@
     "home": "首頁",
     "about": "關於我",
     "projects": "專案作品",
+    "articles": "文章",
     "openMenu": "開啟導航選單",
     "closeMenu": "關閉導航選單"
   },
@@ -109,5 +110,11 @@
     "subtitle": "探索我的個人專案和開源貢獻",
     "openProject": "開啟專案",
     "viewOnGithub": "在 GitHub 上查看"
+  },
+  "articles": {
+    "title": "我的文章",
+    "subtitle": "關於開發、技術和更多領域的想法與見解",
+    "readArticle": "閱讀文章",
+    "readOnMedium": "在 Medium 上閱讀"
   }
 }

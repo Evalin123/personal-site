@@ -60,6 +60,15 @@ const Header = () => {
                   {t('navigation.projects')}
                 </Link>
               </li>
+              <li className="header__nav-item">
+                <Link
+                  to="/articles"
+                  className={`header__nav-link ${isActive('/articles') ? 'header__nav-link--active' : ''}`}
+                  aria-current={isActive('/articles') ? 'page' : undefined}
+                >
+                  {t('navigation.articles')}
+                </Link>
+              </li>
             </ul>
           </nav>
 
@@ -129,6 +138,15 @@ const Header = () => {
                     aria-current={isActive('/projects') ? 'page' : undefined}
                   >
                     {t('navigation.projects')}
+                  </Link>
+                </li>
+                <li className="header__nav-item">
+                  <Link
+                    to="/articles"
+                    className={`header__nav-link ${isActive('/articles') ? 'header__nav-link--active' : ''}`}
+                    aria-current={isActive('/articles') ? 'page' : undefined}
+                  >
+                    {t('navigation.articles')}
                   </Link>
                 </li>
               </ul>

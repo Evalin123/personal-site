@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
+    "articles": "Articles",
     "openMenu": "Open navigation menu",
     "closeMenu": "Close navigation menu"
   },
@@ -109,5 +110,11 @@
     "subtitle": "Explore my side projects and open-source contributions",
     "openProject": "Open project",
     "viewOnGithub": "View on GitHub"
+  },
+  "articles": {
+    "title": "My Articles",
+    "subtitle": "Thoughts and insights on development, technology, and more",
+    "readArticle": "Read article",
+    "readOnMedium": "Read on Medium"
   }
 }
