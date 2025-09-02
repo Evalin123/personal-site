@@ -33,7 +33,7 @@ const Footer = () => {
             >
               {t('footer.links.linkedin')}
             </a>
-            <a href="mailto:hello@eva.dev" className="footer__link" aria-label="Email Contact">
+            <a href="mailto:evalin8@gmail.com" className="footer__link" aria-label="Email Contact">
               {t('footer.links.email')}
             </a>
           </div>
