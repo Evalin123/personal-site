@@ -2,7 +2,9 @@
   "navigation": {
     "home": "Home",
     "about": "About",
-    "projects": "Projects"
+    "projects": "Projects",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
   },
   "home": {
     "title": "Hello, I'm {{name}}",

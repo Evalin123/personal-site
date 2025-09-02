@@ -16,12 +16,7 @@
     padding: variables.$spacing-md 0;
     min-height: 60px;
     gap: variables.$spacing-md;
-
-    > div:last-child {
-      display: flex;
-      align-items: center;
-      gap: variables.$spacing-sm;
-    }
+    position: relative;
   }
 
   &__logo {
@@ -39,14 +34,20 @@
     @include mixins.focus-visible;
   }
 
+  // Desktop navigation - visible on desktop, hidden on mobile
   &__nav {
     flex: 1;
     display: flex;
     justify-content: center;
 
-    @include mixins.respond-to(md) {
+    @media (min-width: variables.$breakpoint-md) {
       justify-content: flex-start;
       margin-left: variables.$spacing-2xl;
+    }
+
+    // Hide on mobile
+    @media (max-width: #{variables.$breakpoint-md - 1px}) {
+      display: none;
     }
   }
 
@@ -57,7 +58,7 @@
     padding: 0;
     gap: variables.$spacing-sm;
 
-    @include mixins.respond-to(md) {
+    @media (min-width: variables.$breakpoint-md) {
       gap: variables.$spacing-lg;
     }
   }
@@ -101,6 +102,22 @@
     @include mixins.focus-visible;
   }
 
+  // Desktop controls - visible on desktop, hidden on mobile
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: variables.$spacing-sm;
+
+    @media (min-width: variables.$breakpoint-md) {
+      gap: variables.$spacing-md;
+    }
+
+    // Hide on mobile
+    @media (max-width: #{variables.$breakpoint-md - 1px}) {
+      display: none;
+    }
+  }
+
   &__theme-toggle {
     @include mixins.button-ghost;
     padding: variables.$spacing-sm;
@@ -125,5 +142,151 @@
     }
 
     @include mixins.focus-visible;
+  }
+
+  // Mobile menu toggle button - hidden on desktop, visible on mobile
+  &__mobile-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: variables.$border-radius-sm;
+    transition: background-color variables.$transition-fast;
+
+    &:hover {
+      background-color: var(--color-bg-secondary);
+    }
+
+    @include mixins.focus-visible;
+
+    // Show on mobile only
+    @media (max-width: #{variables.$breakpoint-md - 1px}) {
+      display: flex;
+    }
+  }
+
+  // Hamburger icon
+  &__hamburger {
+    position: relative;
+    width: 20px;
+    height: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: var(--color-text-primary);
+      border-radius: 1px;
+      transition: all variables.$transition-normal;
+      transform-origin: center;
+    }
+
+    &--open {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(4px, 4px);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+      }
+
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -4px);
+      }
+    }
+  }
+
+  // Mobile overlay - positioned below header
+  &__mobile-overlay {
+    position: fixed;
+    top: 76px; // Header height (60px + padding)
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: calc(100vh - 76px);
+    background: var(--color-bg-primary);
+    z-index: variables.$z-index-dropdown;
+    display: flex;
+    flex-direction: column;
+    animation: slideDown variables.$transition-normal ease-out;
+
+    // Hide on desktop
+    @media (min-width: variables.$breakpoint-md) {
+      display: none;
+    }
+  }
+
+  // Mobile navigation inside overlay
+  &__nav--mobile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: variables.$spacing-3xl variables.$spacing-xl;
+
+    .header__nav-list {
+      flex-direction: column;
+      gap: variables.$spacing-xl;
+      margin-bottom: variables.$spacing-3xl;
+      align-items: center;
+    }
+
+    .header__nav-link {
+      font-size: variables.$font-size-2xl;
+      padding: variables.$spacing-lg variables.$spacing-2xl;
+      text-align: center;
+      min-width: 200px;
+
+      &--active::after {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: 60px;
+      }
+    }
+  }
+
+  // Mobile controls - vertically stacked and centered
+  &__mobile-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: variables.$spacing-lg;
+
+    .header__theme-toggle {
+      font-size: variables.$font-size-2xl;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  // Dark mode adjustments
+  [data-theme='dark'] & {
+    &__mobile-overlay {
+      background: var(--color-bg-primary);
+    }
+  }
+}
+
+// Slide down animation for mobile overlay
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
