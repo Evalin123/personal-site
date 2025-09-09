@@ -16,6 +16,15 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
+      id: 'health-fitness-agent',
+      name: 'AI Health & Fitness Agent',
+      description:
+        'An intelligent health and fitness companion built with Motia framework that integrates with LINE messaging to provide personalized health advice, activity tracking, meal planning, and workout recommendations',
+      tags: ['TypeScript', 'AI', 'Health Tech', 'LINE Bot', 'Motia Framework'],
+      githubUrl: 'https://github.com/Evalin123/health-fitness-agent',
+      icon: '💪',
+    },
+    {
       id: 'mcp-gitlab-server',
       name: 'MCP GitLab Server',
       description:
