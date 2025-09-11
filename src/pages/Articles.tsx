@@ -16,6 +16,15 @@ const Articles = () => {
 
   const articles: Article[] = [
     {
+      id: 'ai-can-code-but-can-it-commit',
+      title: 'AI Can Code, But Can It Commit? Building an MCP Server to Find Out',
+      excerpt:
+        'Exploring the capabilities of AI in software development by building a Model Context Protocol (MCP) server. Can AI truly understand the complete development workflow from coding to committing?',
+      publishedDate: '2025-01-11',
+      url: 'https://medium.com/@evalin8/ai-can-code-but-can-it-commit-building-an-mcp-server-to-find-out-39f2209c5f5c',
+      imageUrl: undefined, // 暫時不使用圖片
+    },
+    {
       id: 'websocket-vs-http',
       title: "WebSocket vs HTTP: What's the Difference and When to Use WebSocket?",
       excerpt:
