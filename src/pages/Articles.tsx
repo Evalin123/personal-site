@@ -30,7 +30,7 @@ const Articles = () => {
       excerpt:
         "In today's highly connected and always-online world, we expect information to be available instantly. WebSocket is one of the key technologies that enables real-time communication between clients and servers.",
       publishedDate: '2024-03-19',
-      url: 'https://medium.com/@evalin8/websocket-vs-http-whats-the-difference-and-when-to-use-websocket-05b7290241e5',
+      url: 'https://medium.com/@evalin8/websocket-vs-http-whats-the-difference-and-when-to-use-websocket-e8f0b8c2cee2',
       imageUrl: undefined, // 暫時不使用圖片
     },
   ];
