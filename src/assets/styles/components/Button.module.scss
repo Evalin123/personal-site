@@ -1,0 +1,22 @@
+.button {
+  font-family: var(--font-family-base);
+  background: var(--color-primary);
+  border: var(--border-width) solid var(--border-color);
+  color: var(--color-gray-dark);
+  padding: calc(var(--space-sm) + 2px) var(--space-lg);
+  cursor: pointer;
+  user-select: none;
+  transition:
+    box-shadow 0.15s ease,
+    transform 0.05s ease;
+  box-shadow: var(--shadow-outset);
+}
+
+.button:hover {
+  box-shadow: var(--shadow-inset);
+}
+
+.button:active {
+  box-shadow: var(--shadow-inset);
+  transform: translate(1px, 1px);
+}

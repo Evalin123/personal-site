@@ -2,45 +2,33 @@ import '../assets/styles/components/Footer.scss';
 
 import { useTranslation } from 'react-i18next';
 
-const Footer = () => {
+export default function Footer() {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="footer__content">
-          <div className="footer__info">
-            <p className="footer__copyright">{t('footer.copyright', { year: currentYear })}</p>
-          </div>
-
-          <div className="footer__links">
-            <a
-              href="https://github.com"
-              className="footer__link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub Profile"
-            >
-              {t('footer.links.github')}
-            </a>
-            <a
-              href="https://linkedin.com"
-              className="footer__link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
-            >
-              {t('footer.links.linkedin')}
-            </a>
-            <a href="mailto:evalin8@gmail.com" className="footer__link" aria-label="Email Contact">
-              {t('footer.links.email')}
-            </a>
-          </div>
-        </div>
+      <div>{t('footer.copyright', { year: currentYear })}</div>
+      <div className="footer__icons">
+        <a
+          className="footer__icon"
+          href="https://github.com"
+          target="_blank"
+          rel="noreferrer"
+          aria-label={t('footer.links.github')}
+        >
+          <i className="fa-brands fa-github" />
+        </a>
+        <a
+          className="footer__icon"
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noreferrer"
+          aria-label={t('footer.links.linkedin')}
+        >
+          <i className="fa-brands fa-linkedin" />
+        </a>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -5,15 +5,16 @@ import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
 import { useThemeStore } from '../stores/themeStore';
+import Button from './Button';
 import LanguageSwitcher from './LanguageSwitcher';
 
-const Header = () => {
+export default function Header() {
   const theme = useThemeStore((state) => state.theme);
   const setTheme = useThemeStore((state) => state.setTheme);
-  const { t } = useTranslation();
-  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
+  const location = useLocation();
   const isActive = (path: string): boolean => {
     return location.pathname === path;
   };
@@ -23,75 +24,70 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
-      <div className="container">
-        <div className="header__content">
-          <Link to="/" className="header__logo">
-            Eva
-          </Link>
+    <>
+      <header className="header">
+        <div className="header__top-bar">
+          <div className="header__window-controls" aria-hidden={true}>
+            <div className="header__ctrl-btn" title="Minimize">
+              _
+            </div>
+            <div className="header__ctrl-btn" title="Maximize">
+              ▢
+            </div>
 
-          {/* Desktop navigation */}
-          <nav className="header__nav" role="navigation" aria-label="Main navigation">
-            <ul className="header__nav-list">
-              <li className="header__nav-item">
-                <Link
-                  to="/"
-                  className={`header__nav-link ${isActive('/') ? 'header__nav-link--active' : ''}`}
-                  aria-current={isActive('/') ? 'page' : undefined}
-                >
-                  {t('navigation.home')}
-                </Link>
-              </li>
-              <li className="header__nav-item">
-                <Link
-                  to="/about"
-                  className={`header__nav-link ${isActive('/about') ? 'header__nav-link--active' : ''}`}
-                  aria-current={isActive('/about') ? 'page' : undefined}
-                >
-                  {t('navigation.about')}
-                </Link>
-              </li>
-              <li className="header__nav-item">
-                <Link
-                  to="/projects"
-                  className={`header__nav-link ${isActive('/projects') ? 'header__nav-link--active' : ''}`}
-                  aria-current={isActive('/projects') ? 'page' : undefined}
-                >
-                  {t('navigation.projects')}
-                </Link>
-              </li>
-              <li className="header__nav-item">
-                <Link
-                  to="/articles"
-                  className={`header__nav-link ${isActive('/articles') ? 'header__nav-link--active' : ''}`}
-                  aria-current={isActive('/articles') ? 'page' : undefined}
-                >
-                  {t('navigation.articles')}
-                </Link>
-              </li>
-            </ul>
-          </nav>
-
-          <div className="header__controls">
-            <button
-              className="header__theme-toggle"
-              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-              aria-label={theme === 'light' ? t('theme.switchToDark') : t('theme.switchToLight')}
-              type="button"
+            <div className="header__ctrl-btn" title="Close">
+              X
+            </div>
+          </div>
+        </div>
+        <div className="header__bottom-bar">
+          <div className="header__logo">
+            <Link to="/" aria-current={isActive('/') ? 'page' : undefined}>
+              EVA
+            </Link>
+          </div>
+          <nav className="header__nav" aria-label="Primary Navigation">
+            <Link
+              to="/about"
+              className="header__nav-item"
+              aria-current={isActive('/about') ? 'page' : undefined}
             >
-              {theme === 'light' ? '🌙' : '☀️'}
-            </button>
-
-            <LanguageSwitcher />
+              <span className="header__nav-underline">{t('navigation.about').charAt(0)}</span>
+              {t('navigation.about').slice(1)}
+            </Link>
+            <Link
+              to="/projects"
+              className="header__nav-item"
+              aria-current={isActive('/projects') ? 'page' : undefined}
+            >
+              <span className="header__nav-underline">{t('navigation.projects').charAt(0)}</span>
+              {t('navigation.projects').slice(1)}
+            </Link>
+            <Link
+              to="/articles"
+              className="header__nav-item"
+              aria-current={isActive('/articles') ? 'page' : undefined}
+            >
+              <span className="header__nav-underline">{t('navigation.articles').charAt(0)}</span>
+              {t('navigation.articles').slice(1)}
+            </Link>
+          </nav>
+          <div className="header__aux-actions">
+            <Button
+              label={theme === 'light' ? '🌙' : '☀️'}
+              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+              className="header__theme-button"
+            />
+            <div className="header__language-button">
+              <LanguageSwitcher />
+            </div>
           </div>
 
-          {/* Mobile menu button */}
-          <button
+          <div
             className="header__mobile-toggle"
             onClick={toggleMobileMenu}
-            aria-label={isMobileMenuOpen ? t('navigation.closeMenu') : t('navigation.openMenu')}
+            aria-controls="mobile-menu"
             aria-expanded={isMobileMenuOpen}
-            type="button"
           >
             <span
               className={`header__hamburger ${isMobileMenuOpen ? 'header__hamburger--open' : ''}`}
@@ -100,77 +96,50 @@ const Header = () => {
               <span></span>
               <span></span>
             </span>
-          </button>
+          </div>
         </div>
 
-        {/* Mobile navigation overlay */}
-        {isMobileMenuOpen && (
-          <div className="header__mobile-overlay">
-            {/* Mobile navigation */}
-            <nav
-              className="header__nav header__nav--mobile"
-              role="navigation"
-              aria-label="Mobile navigation"
+        <div
+          className={`header__mobile-overlay ${
+            isMobileMenuOpen ? 'header__mobile-overlay--open' : ''
+          }`}
+        >
+          <nav className="header__nav header__mobile-nav" aria-label="Mobile Navigation">
+            <Link
+              to="/about"
+              className="header__mobile-nav-item"
+              aria-current={isActive('/about') ? 'page' : undefined}
             >
-              <ul className="header__nav-list">
-                <li className="header__nav-item">
-                  <Link
-                    to="/"
-                    className={`header__nav-link ${isActive('/') ? 'header__nav-link--active' : ''}`}
-                    aria-current={isActive('/') ? 'page' : undefined}
-                  >
-                    {t('navigation.home')}
-                  </Link>
-                </li>
-                <li className="header__nav-item">
-                  <Link
-                    to="/about"
-                    className={`header__nav-link ${isActive('/about') ? 'header__nav-link--active' : ''}`}
-                    aria-current={isActive('/about') ? 'page' : undefined}
-                  >
-                    {t('navigation.about')}
-                  </Link>
-                </li>
-                <li className="header__nav-item">
-                  <Link
-                    to="/projects"
-                    className={`header__nav-link ${isActive('/projects') ? 'header__nav-link--active' : ''}`}
-                    aria-current={isActive('/projects') ? 'page' : undefined}
-                  >
-                    {t('navigation.projects')}
-                  </Link>
-                </li>
-                <li className="header__nav-item">
-                  <Link
-                    to="/articles"
-                    className={`header__nav-link ${isActive('/articles') ? 'header__nav-link--active' : ''}`}
-                    aria-current={isActive('/articles') ? 'page' : undefined}
-                  >
-                    {t('navigation.articles')}
-                  </Link>
-                </li>
-              </ul>
-
-              {/* Mobile controls - vertically stacked */}
-              <div className="header__mobile-controls">
-                <button
-                  className="header__theme-toggle"
-                  onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-                  aria-label={
-                    theme === 'light' ? t('theme.switchToDark') : t('theme.switchToLight')
-                  }
-                  type="button"
-                >
-                  {theme === 'light' ? '🌙' : '☀️'}
-                </button>
-                <LanguageSwitcher />
-              </div>
-            </nav>
+              {t('navigation.about')}
+            </Link>
+            <Link
+              to="/projects"
+              className="header__mobile-nav-item"
+              aria-current={isActive('/projects') ? 'page' : undefined}
+            >
+              {t('navigation.projects')}
+            </Link>
+            <Link
+              to="/articles"
+              className="header__mobile-nav-item"
+              aria-current={isActive('/articles') ? 'page' : undefined}
+            >
+              {t('navigation.articles')}
+            </Link>
+          </nav>
+          <div className="header__divider" />
+          <div className="header__mobile-actions">
+            <Button
+              label={theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
+              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+              className="header__theme-button"
+            />
+            <div className="header__language-button">
+              <LanguageSwitcher />
+            </div>
           </div>
-        )}
-      </div>
-    </header>
+        </div>
+      </header>
+    </>
   );
-};
-
-export default Header;
+}

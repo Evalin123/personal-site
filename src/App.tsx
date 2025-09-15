@@ -1,27 +1,22 @@
-// Initialize theme store
-import './stores/themeStore';
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Layout from './components/Layout';
-import About from './pages/About';
-import Articles from './pages/Articles';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
+import AboutPage from './pages/AboutPage';
+import ArticlesPage from './pages/ArticlesPage';
+import HomePage from './pages/HomePage';
+import ProjectsPage from './pages/ProjectsPage';
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="articles" element={<Articles />} />
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="projects" element={<ProjectsPage />} />
+          <Route path="articles" element={<ArticlesPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
-
-export default App;

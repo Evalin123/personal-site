@@ -20,7 +20,10 @@ const setUserPreference = (hasPreference: boolean): void => {
 };
 
 // Exported functions
-export const getInitialTheme = (): { theme: Theme; isUserPreference: boolean } => {
+export const getInitialTheme = (): {
+  theme: Theme;
+  isUserPreference: boolean;
+} => {
   if (typeof window === 'undefined') return { theme: 'light', isUserPreference: false };
 
   const userHasPreference = hasUserPreference();

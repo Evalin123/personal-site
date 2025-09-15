@@ -29,64 +29,48 @@
     }
   },
   "about": {
-    "title": "關於我",
-    "subtitle": "了解更多關於我的技術歷程與開發熱忱",
+    "title": "關於 Eva",
+    "subtitle": "前端工程師 • 復古粉彩 UI 愛好者",
     "intro": {
-      "title": "你好，我是 Eva",
-      "paragraph1": "我是一位熱愛開發的工程師，專注於創造美觀且功能完整的網頁應用程式。我的技術之旅始於幾年前，從那時起就不斷學習和成長。",
-      "paragraph2": "我相信撰寫乾淨、可維護的程式碼，並且致力於創造能夠帶來影響力的使用者體驗。當我不在寫程式時，你會發現我在探索新技術、為開源專案貢獻，或是與開發者社群分享知識。"
+      "heading": "你好，我是 Eva",
+      "paragraph1": "我專注於建構乾淨、易用的介面，對復古電腦美學和粉彩色調情有獨鍾。",
+      "paragraph2": "我的重點在於清晰性、可維護性，以及讓應用程式感覺友善且快速的貼心 UX 細節。"
     },
     "skills": {
-      "title": "技能與技術",
+      "title": "技能",
       "frontend": {
-        "title": "Frontend",
-        "items": [
-          "React & TypeScript",
-          "HTML5 & CSS3/SASS",
-          "JavaScript (ES6+)",
-          "Responsive Design",
-          "Accessibility (a11y)"
-        ]
+        "title": "前端",
+        "items": ["React", "TypeScript", "SCSS", "Vite", "CSS Modules"]
       },
       "tools": {
-        "title": "Tools & Workflow",
-        "items": [
-          "Git & GitHub",
-          "Vite & Webpack",
-          "ESLint & Prettier",
-          "Jest & Testing Library",
-          "Figma & Design Systems"
-        ]
+        "title": "工具",
+        "items": ["Git", "pnpm", "ESLint", "Prettier", "Vite"]
       },
       "backend": {
-        "title": "Backend",
-        "items": [
-          "Node.js & Express",
-          "Python & Django",
-          "PostgreSQL & MongoDB",
-          "RESTful APIs",
-          "GraphQL"
-        ]
+        "title": "後端",
+        "items": ["Node.js", "Express", "REST APIs", "Firebase"]
       }
     },
     "values": {
-      "title": "我重視的價值",
-      "quality": {
-        "title": "程式碼品質",
-        "description": "撰寫乾淨、可維護且經過良好測試的程式碼，經得起時間的考驗。"
-      },
-      "ux": {
-        "title": "使用者體驗",
-        "description": "創造直觀且具可及性的體驗，讓使用者樂於互動。"
-      },
-      "learning": {
-        "title": "持續學習",
-        "description": "持續關注業界最新技術和最佳實踐。"
-      },
-      "collaboration": {
-        "title": "團隊合作",
-        "description": "與團隊有效協作，為正向的開發文化做出貢獻。"
-      }
+      "title": "價值觀",
+      "items": [
+        {
+          "title": "清晰性",
+          "description": "可讀的程式碼、簡潔的流程，以及能自我解釋的 UI。"
+        },
+        {
+          "title": "一致性",
+          "description": "設計系統、共享元件，以及跨功能的可預測模式。"
+        },
+        {
+          "title": "可及性",
+          "description": "預設支援鍵盤操作、語意化 HTML 和仔細的對比度。"
+        },
+        {
+          "title": "效能",
+          "description": "交付快速的 UI，合理的套件大小、快取和最少的重渲染。"
+        }
+      ]
     }
   },
   "footer": {

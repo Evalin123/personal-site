@@ -1,51 +1,64 @@
-// Color palette
 :root {
-  // Light theme colors
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
-  --color-secondary: #64748b;
-  --color-accent: #f59e0b;
+  --color-gray-light: #e0e0e0;
+  --color-gray: #c0c0c0;
+  --color-gray-dark: #555555;
 
-  // Light theme background and text
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f8fafc;
-  --color-bg-tertiary: #e2e8f0;
-  --color-text-primary: #1e293b;
-  --color-text-secondary: #475569;
-  --color-text-tertiary: #64748b;
+  --color-pastel-pink: #ffc0cb;
+  --color-pastel-blue: #add8e6;
+  --color-pastel-green: #98fb98;
+  --color-pastel-yellow: #fffacd;
 
-  // Border and shadow
-  --color-border: #e2e8f0;
-  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-primary: var(--color-pastel-blue);
+  --color-secondary: var(--color-pastel-pink);
+  --color-accent: var(--color-pastel-green);
+  --color-warning: var(--color-pastel-yellow);
 
-  // Status colors
-  --color-success: #059669;
-  --color-warning: #d97706;
-  --color-error: #dc2626;
+  --font-family-base: 'Sora', sans-serif;
+
+  --border-width: 2px;
+  --border-color: var(--color-gray-dark);
+  --shadow-inset: inset 2px 2px var(--color-gray-dark);
+  --shadow-outset: 2px 2px var(--color-gray-dark);
+
+  --space-xs: 0.25rem; // 4px
+  --space-sm: 0.5rem; // 8px
+  --space-md: 1rem; // 16px
+  --space-lg: 1.5rem; // 24px
+  --space-xl: 2rem; // 32px
+  --space-2xl: 3rem; // 48px
+  --space-3xl: 4rem; // 64px
 }
 
+/* Dark Theme Variables */
 [data-theme='dark'] {
-  // Dark theme background and text
-  --color-bg-primary: #0f172a;
-  --color-bg-secondary: #1e293b;
-  --color-bg-tertiary: #334155;
-  --color-text-primary: #f1f5f9;
-  --color-text-secondary: #cbd5e1;
-  --color-text-tertiary: #94a3b8;
+  --color-gray-light: #2a2a2a;
+  --color-gray: #404040;
+  --color-gray-dark: #cccccc;
 
-  // Border and shadow for dark theme
-  --color-border: #334155;
-  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-pastel-pink: #d4a5a8;
+  --color-pastel-blue: #8bb3c7;
+  --color-pastel-green: #7db57d;
+  --color-pastel-yellow: #c7b894;
+
+  --color-primary: var(--color-pastel-blue);
+  --color-secondary: var(--color-pastel-pink);
+  --color-accent: var(--color-pastel-green);
+  --color-warning: var(--color-pastel-yellow);
+
+  --border-color: var(--color-gray-dark);
+  --shadow-inset: inset 2px 2px var(--color-gray-dark);
+  --shadow-outset: 2px 2px var(--color-gray-dark);
 }
 
-// Breakpoints
+// SCSS Variables (for use in mixins and calculations)
+// Breakpoints (use CSS custom properties when possible, these for SCSS calculations)
 $breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1280px;
 $breakpoint-2xl: 1536px;
 
-// Spacing
+// Spacing (use CSS custom properties when possible, these for SCSS calculations)
 $spacing-xs: 0.25rem; // 4px
 $spacing-sm: 0.5rem; // 8px
 $spacing-md: 1rem; // 16px
@@ -54,31 +67,14 @@ $spacing-xl: 2rem; // 32px
 $spacing-2xl: 3rem; // 48px
 $spacing-3xl: 4rem; // 64px
 
-// Typography
-$font-family-sans:
-  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-$font-family-mono:
-  'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-
-$font-size-xs: 0.75rem; // 12px
-$font-size-sm: 0.875rem; // 14px
-$font-size-base: 1rem; // 16px
-$font-size-lg: 1.125rem; // 18px
-$font-size-xl: 1.25rem; // 20px
-$font-size-2xl: 1.5rem; // 24px
-$font-size-3xl: 1.875rem; // 30px
-$font-size-4xl: 2.25rem; // 36px
-
-$font-weight-normal: 400;
+// Typography (for mixins)
+$font-family-sans: 'Sora', sans-serif;
+$font-size-base: 1rem;
 $font-weight-medium: 500;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
 
-// Border radius
-$border-radius-sm: 0.25rem; // 4px
-$border-radius-md: 0.5rem; // 8px
-$border-radius-lg: 0.75rem; // 12px
-$border-radius-xl: 1rem; // 16px
+// Border radius (for mixins)
+$border-radius-md: 4px;
+$border-radius-lg: 8px;
 
 // Transitions
 $transition-fast: 150ms ease-in-out;
