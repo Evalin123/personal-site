@@ -4,7 +4,6 @@
 .header {
   display: flex;
   flex-direction: column;
-  background: var(--color-gray-light);
   border-bottom: var(--border-width) solid var(--border-color);
   box-shadow: var(--shadow-outset);
   font-family: var(--font-family-base);
@@ -22,6 +21,13 @@
 
   &__top-bar {
     display: flex;
+    background: #bfc4f2;
+    background: linear-gradient(
+      90deg,
+      rgba(191, 196, 242, 1) 0%,
+      rgba(255, 196, 202, 1) 50%,
+      rgba(255, 255, 176, 1) 100%
+    );
     justify-content: flex-end;
     padding: var(--space-xs) var(--space-md);
     border-bottom: var(--border-width) solid var(--border-color);
@@ -29,6 +35,7 @@
 
   &__bottom-bar {
     display: grid;
+    background: var(--color-gray-light);
     grid-template-columns: auto 1fr auto auto auto;
     align-items: center;
     gap: var(--space-sm);
@@ -82,7 +89,7 @@
 
   &__ctrl-btn {
     width: 28px;
-    height: 24px;
+    height: 28px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -101,7 +108,7 @@
     align-items: center;
     justify-content: center;
     width: 32px;
-    height: 28px;
+    height: 32px;
     border: var(--border-width) solid var(--border-color);
     background: var(--color-gray);
     box-shadow: var(--shadow-outset);
@@ -157,7 +164,7 @@
 
   &__mobile-overlay {
     position: fixed;
-    top: 80px;
+    top: 88px;
     left: 0;
     right: 0;
     width: 100vw;
@@ -251,6 +258,16 @@
       min-width: 150px;
     }
 
+    .header__theme-button {
+      width: 100%;
+
+      .theme-switcher {
+        width: 100%;
+        min-width: 150px;
+        justify-content: center;
+      }
+    }
+
     .header__language-button {
       width: 100%;
 
@@ -262,6 +279,7 @@
     }
   }
 
+  // Desktop container styles for action buttons
   &__theme-button {
     position: relative;
     transition: all variables.$transition-normal;
@@ -270,8 +288,31 @@
       transform: scale(1.05);
     }
 
-    .button {
-      transition: all variables.$transition-normal;
+    .theme-switcher:hover {
+      transform: none;
+      box-shadow: var(--shadow-inset);
+    }
+
+    .theme-switcher:active {
+      transform: translate(1px, 1px);
+    }
+  }
+
+  &__language-button {
+    position: relative;
+    transition: all variables.$transition-normal;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .language-switcher:hover {
+      transform: none;
+      box-shadow: var(--shadow-inset);
+    }
+
+    .language-switcher:active {
+      transform: translate(1px, 1px);
     }
   }
 }

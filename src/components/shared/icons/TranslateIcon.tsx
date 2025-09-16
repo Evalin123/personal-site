@@ -11,9 +11,9 @@ export default function TranslateIcon({ className, size = 24 }: TranslateIconPro
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <path d="M12 2a14.5 14.5 0 0 1 0 20a14.5 14.5 0 0 1 0-20"></path>

@@ -1,6 +1,6 @@
 @use '../variables';
 
-.language-switcher {
+.theme-switcher {
   font-family: var(--font-family-base);
   background: var(--color-primary);
   border: var(--border-width) solid var(--border-color);
@@ -15,7 +15,6 @@
 
   display: inline-flex;
   align-items: center;
-  gap: var(--space-xs);
   justify-content: center;
 
   &:hover {
@@ -32,14 +31,8 @@
     outline-offset: 2px;
   }
 
-  &__flag {
+  &__icon {
     font-size: 1em;
-    line-height: 1;
-  }
-
-  &__text {
-    font-size: 1em;
-    font-weight: 400;
     line-height: 1;
   }
 }

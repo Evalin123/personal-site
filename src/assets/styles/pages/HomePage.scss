@@ -5,6 +5,7 @@
   grid-template-columns: 1fr;
   gap: var(--space-lg);
   padding: 0 var(--space-lg);
+  background: var(--color-white);
 }
 
 .panel {
@@ -12,7 +13,6 @@
   max-width: 880px;
   margin: 0 auto;
   padding: var(--space-lg);
-  background: var(--color-gray-light);
   border: var(--border-width) solid var(--border-color);
   box-shadow: var(--shadow-outset);
 }

@@ -4,15 +4,10 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
-import { useThemeStore } from '../stores/themeStore';
 import LanguageSwitcher from './LanguageSwitcher';
-import Button from './shared/Button';
-import MoonIcon from './shared/icons/MoonIcon';
-import SunIcon from './shared/icons/SunIcon';
+import ThemeSwitcher from './ThemeSwitcher';
 
 export default function Header() {
-  const theme = useThemeStore((state) => state.theme);
-  const setTheme = useThemeStore((state) => state.setTheme);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t } = useTranslation();
 
@@ -75,11 +70,9 @@ export default function Header() {
             </Link>
           </nav>
           <div className="header__aux-actions">
-            <Button
-              label={theme === 'light' ? <SunIcon size={16} /> : <MoonIcon size={16} />}
-              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-              className="header__theme-button"
-            />
+            <div className="header__theme-button">
+              <ThemeSwitcher />
+            </div>
             <div className="header__language-button">
               <LanguageSwitcher />
             </div>
@@ -131,11 +124,9 @@ export default function Header() {
           </nav>
           <div className="header__divider" />
           <div className="header__mobile-actions">
-            <Button
-              label={theme === 'light' ? <SunIcon size={16} /> : <MoonIcon size={16} />}
-              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-              className="header__theme-button"
-            />
+            <div className="header__theme-button">
+              <ThemeSwitcher />
+            </div>
             <div className="header__language-button">
               <LanguageSwitcher />
             </div>
