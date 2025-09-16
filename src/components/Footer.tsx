@@ -2,6 +2,9 @@ import '@/assets/styles/components/Footer.scss';
 
 import { useTranslation } from 'react-i18next';
 
+import GithubIcon from './shared/icons/GithubIcon';
+import LinkedinIcon from './shared/icons/LinkedinIcon';
+
 export default function Footer() {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
@@ -17,7 +20,7 @@ export default function Footer() {
           rel="noreferrer"
           aria-label={t('footer.links.github')}
         >
-          <i className="fa-brands fa-github" />
+          <GithubIcon size={16} />
         </a>
         <a
           className="footer__icon"
@@ -26,7 +29,7 @@ export default function Footer() {
           rel="noreferrer"
           aria-label={t('footer.links.linkedin')}
         >
-          <i className="fa-brands fa-linkedin" />
+          <LinkedinIcon size={16} />
         </a>
       </div>
     </footer>

@@ -3,6 +3,7 @@ import '@/assets/styles/components/LanguageSwitcher.scss';
 import { useTranslation } from 'react-i18next';
 
 import type { Language } from '../types/i18n';
+import TranslateIcon from './shared/icons/TranslateIcon';
 
 const LanguageSwitcher = () => {
   const { i18n, t } = useTranslation();
@@ -18,10 +19,6 @@ const LanguageSwitcher = () => {
     return currentLanguage === 'en' ? t('language.switchToZh') : t('language.switchToEn');
   };
 
-  const getLanguageFlag = () => {
-    return currentLanguage === 'en' ? '🇹🇼' : '🇺🇸';
-  };
-
   return (
     <button
       className="language-switcher"
@@ -30,7 +27,7 @@ const LanguageSwitcher = () => {
       type="button"
     >
       <span className="language-switcher__flag" aria-hidden="true">
-        {getLanguageFlag()}
+        <TranslateIcon size={16} />
       </span>
       <span className="language-switcher__text">{getLanguageLabel()}</span>
     </button>

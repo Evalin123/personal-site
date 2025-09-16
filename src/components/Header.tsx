@@ -7,6 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useThemeStore } from '../stores/themeStore';
 import LanguageSwitcher from './LanguageSwitcher';
 import Button from './shared/Button';
+import MoonIcon from './shared/icons/MoonIcon';
 import SunIcon from './shared/icons/SunIcon';
 
 export default function Header() {
@@ -75,7 +76,7 @@ export default function Header() {
           </nav>
           <div className="header__aux-actions">
             <Button
-              label={theme === 'light' ? <SunIcon size={16} /> : '🌙'}
+              label={theme === 'light' ? <SunIcon size={16} /> : <MoonIcon size={16} />}
               onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
               className="header__theme-button"
             />
@@ -131,7 +132,7 @@ export default function Header() {
           <div className="header__divider" />
           <div className="header__mobile-actions">
             <Button
-              label={theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
+              label={theme === 'light' ? <SunIcon size={16} /> : <MoonIcon size={16} />}
               onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
               className="header__theme-button"
             />
