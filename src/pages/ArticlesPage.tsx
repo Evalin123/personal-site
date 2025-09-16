@@ -1,9 +1,9 @@
-import '../assets/styles/pages/ArticlesPage.scss';
+import '@/assets/styles/pages/ArticlesPage.scss';
 
 import { useTranslation } from 'react-i18next';
 
 import mcpServer from '../assets/articles/mcpServer.png';
-import Button from '../components/Button';
+import Button from '../components/shared/Button';
 
 type Article = {
   id: string;

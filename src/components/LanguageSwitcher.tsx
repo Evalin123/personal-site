@@ -1,4 +1,4 @@
-import '../assets/styles/components/LanguageSwitcher.scss';
+import '@/assets/styles/components/LanguageSwitcher.scss';
 
 import { useTranslation } from 'react-i18next';
 

@@ -1,7 +1,9 @@
-import styles from '../assets/styles/components/Button.module.scss';
+import type { ReactNode } from 'react';
+
+import styles from '@/assets/styles/components/Button.module.scss';
 
 type ButtonProps = {
-  label: string;
+  label: ReactNode;
   onClick?: () => void;
   className?: string;
 };

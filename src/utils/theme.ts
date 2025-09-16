@@ -1,4 +1,4 @@
-import type { Theme } from '../types/theme';
+import type { Theme } from '@/types/theme';
 
 const THEME_STORAGE_KEY = 'personal-site-theme';
 const USER_PREFERENCE_KEY = 'personal-site-user-preference';

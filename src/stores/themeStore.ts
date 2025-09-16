@@ -1,12 +1,12 @@
 import { create } from 'zustand';
 
-import type { Theme } from '../types/theme';
+import type { Theme } from '@/types/theme';
 import {
   applyThemeToDocument,
   createSystemThemeListener,
   getInitialTheme,
   setStorageTheme,
-} from '../utils/theme';
+} from '@/utils/theme';
 
 type ThemeStore = {
   theme: Theme;

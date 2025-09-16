@@ -14,6 +14,9 @@ importers:
       i18next-browser-languagedetector:
         specifier: ^8.2.0
         version: 8.2.0
+      pixelarticons:
+        specifier: 1.8.0
+        version: 1.8.0
       react:
         specifier: ^19.1.1
         version: 19.1.1
@@ -36,6 +39,9 @@ importers:
       '@eslint/js':
         specifier: ^9.34.0
         version: 9.35.0
+      '@types/node':
+        specifier: ^24.5.0
+        version: 24.5.0
       '@types/react':
         specifier: ^19.1.10
         version: 19.1.13
@@ -47,7 +53,7 @@ importers:
         version: 5.3.3
       '@vitejs/plugin-react':
         specifier: ^5.0.0
-        version: 5.0.2(vite@7.1.5(sass@1.92.1))
+        version: 5.0.2(vite@7.1.5(@types/node@24.5.0)(sass@1.92.1))
       eslint:
         specifier: ^9.34.0
         version: 9.35.0
@@ -89,7 +95,7 @@ importers:
         version: 8.43.0(eslint@9.35.0)(typescript@5.8.3)
       vite:
         specifier: ^7.1.2
-        version: 7.1.5(sass@1.92.1)
+        version: 7.1.5(@types/node@24.5.0)(sass@1.92.1)
 
 packages:
 
@@ -638,6 +644,9 @@ packages:
 
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+
+  '@types/node@24.5.0':
+    resolution: {integrity: sha512-y1dMvuvJspJiPSDZUQ+WMBvF7dpnEqN4x9DDC9ie5Fs/HUZJA3wFp7EhHoVaKX/iI0cRoECV8X2jL8zi0xrHCg==}
 
   '@types/react-dom@19.1.9':
     resolution: {integrity: sha512-qXRuZaOsAdXKFyOhRBg6Lqqc0yay13vN7KrIg4L7N4aaHN68ma9OK3NE1BoDFgFOTfM7zg+3/8+2n8rLUH3OKQ==}
@@ -1555,6 +1564,9 @@ packages:
     resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
     engines: {node: '>=12'}
 
+  pixelarticons@1.8.0:
+    resolution: {integrity: sha512-BJ/F5JQROW3t2ktTeBvaGndKhlRCaMpDauT26AzHsY6HX1FOs09aY4LMUH7f61lSI+1+QfNf98IvC4aeiCYfvA==}
+
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
@@ -1843,6 +1855,9 @@ packages:
   unbox-primitive@1.1.0:
     resolution: {integrity: sha512-nWJ91DjeOkej/TA8pXQ3myruKpKEYgqvpw9lz4OPHj/NWFNluYrjbz9j01CJ8yKQd2g4jFoOkINCTW2I5LEEyw==}
     engines: {node: '>= 0.4'}
+
+  undici-types@7.12.0:
+    resolution: {integrity: sha512-goOacqME2GYyOZZfb5Lgtu+1IDmAlAEu5xnD3+xTzS10hT0vzpf0SPjkXwAw9Jm+4n/mQGDP3LO8CPbYROeBfQ==}
 
   update-browserslist-db@1.1.3:
     resolution: {integrity: sha512-UxhIZQ+QInVdunkDAaiazvvT/+fXL5Osr0JZlJulepYu6Jd7qJtDZjlur0emRlT71EN3ScPoE7gvsuIKKNavKw==}
@@ -2386,6 +2401,10 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
+  '@types/node@24.5.0':
+    dependencies:
+      undici-types: 7.12.0
+
   '@types/react-dom@19.1.9(@types/react@19.1.13)':
     dependencies:
       '@types/react': 19.1.13
@@ -2498,7 +2517,7 @@ snapshots:
       '@typescript-eslint/types': 8.43.0
       eslint-visitor-keys: 4.2.1
 
-  '@vitejs/plugin-react@5.0.2(vite@7.1.5(sass@1.92.1))':
+  '@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.5.0)(sass@1.92.1))':
     dependencies:
       '@babel/core': 7.28.4
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.4)
@@ -2506,7 +2525,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.34
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 7.1.5(sass@1.92.1)
+      vite: 7.1.5(@types/node@24.5.0)(sass@1.92.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -3511,6 +3530,8 @@ snapshots:
 
   picomatch@4.0.3: {}
 
+  pixelarticons@1.8.0: {}
+
   possible-typed-array-names@1.1.0: {}
 
   postcss@8.5.6:
@@ -3880,6 +3901,8 @@ snapshots:
       has-symbols: 1.1.0
       which-boxed-primitive: 1.1.1
 
+  undici-types@7.12.0: {}
+
   update-browserslist-db@1.1.3(browserslist@4.26.0):
     dependencies:
       browserslist: 4.26.0
@@ -3890,7 +3913,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite@7.1.5(sass@1.92.1):
+  vite@7.1.5(@types/node@24.5.0)(sass@1.92.1):
     dependencies:
       esbuild: 0.25.9
       fdir: 6.5.0(picomatch@4.0.3)
@@ -3899,6 +3922,7 @@ snapshots:
       rollup: 4.50.2
       tinyglobby: 0.2.15
     optionalDependencies:
+      '@types/node': 24.5.0
       fsevents: 2.3.3
       sass: 1.92.1
 

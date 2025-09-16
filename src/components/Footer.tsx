@@ -1,4 +1,4 @@
-import '../assets/styles/components/Footer.scss';
+import '@/assets/styles/components/Footer.scss';
 
 import { useTranslation } from 'react-i18next';
 

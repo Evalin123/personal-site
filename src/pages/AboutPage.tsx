@@ -1,4 +1,4 @@
-import '../assets/styles/pages/AboutPage.scss';
+import '@/assets/styles/pages/AboutPage.scss';
 
 import { useTranslation } from 'react-i18next';
 

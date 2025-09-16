@@ -1,12 +1,13 @@
-import '../assets/styles/components/Header.scss';
+import '@/assets/styles/components/Header.scss';
 
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
 import { useThemeStore } from '../stores/themeStore';
-import Button from './Button';
 import LanguageSwitcher from './LanguageSwitcher';
+import Button from './shared/Button';
+import SunIcon from './shared/icons/SunIcon';
 
 export default function Header() {
   const theme = useThemeStore((state) => state.theme);
@@ -74,7 +75,7 @@ export default function Header() {
           </nav>
           <div className="header__aux-actions">
             <Button
-              label={theme === 'light' ? '🌙' : '☀️'}
+              label={theme === 'light' ? <SunIcon size={16} /> : '🌙'}
               onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
               className="header__theme-button"
             />
