@@ -1,12 +1,16 @@
 :root {
   --color-gray-light: #e0e0e0;
   --color-gray: #c0c0c0;
-  --color-gray-dark: #555555;
+  --color-gray-dark: hsl(0, 0%, 33%);
+  --color-white: #ffffff;
 
   --color-pastel-pink: #ffc0cb;
   --color-pastel-blue: #add8e6;
   --color-pastel-green: #98fb98;
   --color-pastel-yellow: #fffacd;
+  --color-pastel-purple: #d8b4fe;
+  --color-pastel-orange: #fcebd7;
+  --color-pastel-white: #fdfcf5;
 
   --color-primary: var(--color-pastel-blue);
   --color-secondary: var(--color-pastel-pink);

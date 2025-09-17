@@ -5,7 +5,7 @@
   max-width: 960px;
   margin: 0 auto;
   padding: var(--space-lg);
-  background: var(--color-gray-light);
+  background: var(--color-white);
   border: var(--border-width) solid var(--border-color);
   box-shadow: var(--shadow-outset);
 }
@@ -53,16 +53,17 @@
 }
 
 .about__window-box {
-  background: var(--color-gray-light);
   border: var(--border-width) solid var(--border-color);
   box-shadow: var(--shadow-outset);
+  background: #f5f3ff;
 }
 
 .about__title-bar {
-  background: var(--color-gray);
+  background: var(--color-pastel-purple);
   border-bottom: var(--border-width) solid var(--border-color);
   padding: var(--space-xs) var(--space-md);
   font-weight: 600;
+  color: var(--color-white);
 }
 
 .about__item-list {
@@ -83,7 +84,7 @@
 }
 
 .about__value-card {
-  background: var(--color-gray-light);
+  background: #fff2b2;
   border: var(--border-width) solid var(--border-color);
   box-shadow: var(--shadow-outset);
   padding: var(--space-md);
