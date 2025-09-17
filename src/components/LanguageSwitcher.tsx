@@ -16,7 +16,7 @@ const LanguageSwitcher = () => {
   };
 
   const getLanguageLabel = () => {
-    return currentLanguage === 'en' ? t('language.switchToZh') : t('language.switchToEn');
+    return currentLanguage === 'en' ? t('language.switchToEn') : t('language.switchToZh');
   };
 
   return (
