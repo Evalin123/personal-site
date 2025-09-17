@@ -8,6 +8,13 @@
   background: var(--color-white);
   border: var(--border-width) solid var(--border-color);
   box-shadow: var(--shadow-outset);
+  /* Local gradient surfaces for article cards */
+  --articles-card-gradient: linear-gradient(
+    135deg,
+    var(--color-pastel-orange) 0%,
+    var(--color-secondary) 50%,
+    var(--color-warning) 100%
+  );
 }
 
 .title {
@@ -27,9 +34,12 @@
   grid-template-columns: 1fr;
   gap: var(--space-md);
   align-items: stretch;
-  background: #f5dfc7;
+  background: var(--articles-card-gradient);
   border: var(--border-width) solid var(--border-color);
-  box-shadow: var(--shadow-outset);
+  box-shadow:
+    var(--shadow-outset),
+    inset 1px 1px rgba(255, 255, 255, 0.6),
+    inset -1px -1px rgba(0, 0, 0, 0.06);
   padding: var(--space-md);
   transition: box-shadow 0.15s ease;
 }

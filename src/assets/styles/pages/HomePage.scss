@@ -11,7 +11,7 @@
   width: 100%;
   max-width: 880px;
   margin: 0 auto;
-  background: var(--color-pastel-yellow);
+  background: var(--surface-butter);
   padding: var(--space-lg);
   border: var(--border-width) solid var(--border-color);
   box-shadow: var(--shadow-outset);
@@ -57,7 +57,7 @@
 }
 
 .home__feature-card {
-  background: var(--color-pastel-pink);
+  background: var(--surface-mint);
   border: var(--border-width) solid var(--border-color);
   box-shadow: var(--shadow-outset);
   padding: var(--space-md);

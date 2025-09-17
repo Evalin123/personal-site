@@ -21,13 +21,7 @@
 
   &__top-bar {
     display: flex;
-    background: #bfc4f2;
-    background: linear-gradient(
-      90deg,
-      rgba(191, 196, 242, 1) 0%,
-      rgba(255, 196, 202, 1) 50%,
-      rgba(255, 255, 176, 1) 100%
-    );
+    background: var(--chrome-gradient);
     justify-content: flex-end;
     padding: var(--space-xs) var(--space-md);
     border-bottom: var(--border-width) solid var(--border-color);

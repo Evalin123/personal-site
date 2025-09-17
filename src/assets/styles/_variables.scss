@@ -4,18 +4,28 @@
   --color-gray-dark: hsl(0, 0%, 33%);
   --color-white: #ffffff;
 
-  --color-pastel-pink: #ffc0cb;
-  --color-pastel-blue: #add8e6;
-  --color-pastel-green: #98fb98;
-  --color-pastel-yellow: #fffacd;
-  --color-pastel-purple: #d8b4fe;
-  --color-pastel-orange: #fcebd7;
-  --color-pastel-white: #fdfcf5;
+  --color-pastel-pink: #ffc2e6;
+  --color-pastel-blue: #a7c7ff;
+  --color-pastel-green: #cdeccf;
+  --color-pastel-yellow: #ffe8a3;
+  --color-pastel-purple: #c8b6ff;
+  --color-pastel-orange: #ffe2cc;
+  --color-pastel-white: #fff6f0;
 
   --color-primary: var(--color-pastel-blue);
   --color-secondary: var(--color-pastel-pink);
   --color-accent: var(--color-pastel-green);
   --color-warning: var(--color-pastel-yellow);
+
+  /* Surfaces tuned for Y2K/pastel UI */
+  --surface-lilac: #f5f3ff;
+  --surface-mint: #eaf6ef;
+  --surface-butter: #fff7c2;
+  --surface-mint-deep: #d8eddf;
+
+  /* Optional chrome-like gradient bar */
+  --chrome-gradient: linear-gradient(90deg, #ffc2e6 0%, #c8b6ff 50%, #a7c7ff 100%);
+  --chrome-subtle: #dcdde4;
 
   --font-family-base: 'Sora', sans-serif;
 
@@ -39,10 +49,10 @@
   --color-gray: #404040;
   --color-gray-dark: #cccccc;
 
-  --color-pastel-pink: #d4a5a8;
-  --color-pastel-blue: #8bb3c7;
-  --color-pastel-green: #7db57d;
-  --color-pastel-yellow: #c7b894;
+  --color-pastel-pink: #f3a7d6;
+  --color-pastel-blue: #8fb0ff;
+  --color-pastel-green: #9fd8b3;
+  --color-pastel-yellow: #ffd677;
 
   --color-primary: var(--color-pastel-blue);
   --color-secondary: var(--color-pastel-pink);
@@ -52,6 +62,8 @@
   --border-color: var(--color-gray-dark);
   --shadow-inset: inset 2px 2px var(--color-gray-dark);
   --shadow-outset: 2px 2px var(--color-gray-dark);
+  /* Subtle header background in dark mode */
+  --chrome-subtle: #4a4a55;
 }
 
 // SCSS Variables (for use in mixins and calculations)

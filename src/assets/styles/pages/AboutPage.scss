@@ -55,7 +55,7 @@
 .about__window-box {
   border: var(--border-width) solid var(--border-color);
   box-shadow: var(--shadow-outset);
-  background: #f5f3ff;
+  background: var(--surface-lilac);
 }
 
 .about__title-bar {
@@ -84,9 +84,12 @@
 }
 
 .about__value-card {
-  background: #fff2b2;
+  background: var(--surface-butter);
   border: var(--border-width) solid var(--border-color);
-  box-shadow: var(--shadow-outset);
+  box-shadow:
+    var(--shadow-outset),
+    inset 1px 1px rgba(255, 255, 255, 0.65),
+    inset -1px -1px rgba(0, 0, 0, 0.06);
   padding: var(--space-md);
   transition: box-shadow 0.15s ease;
 }
