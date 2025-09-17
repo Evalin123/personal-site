@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="footer__icons">
         <a
           className="footer__icon"
-          href="https://github.com"
+          href="https://github.com/Evalin123"
           target="_blank"
           rel="noreferrer"
           aria-label={t('footer.links.github')}
@@ -24,7 +24,7 @@ export default function Footer() {
         </a>
         <a
           className="footer__icon"
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/eva-lin-9baa90214/"
           target="_blank"
           rel="noreferrer"
           aria-label={t('footer.links.linkedin')}

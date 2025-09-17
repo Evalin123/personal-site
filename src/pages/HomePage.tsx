@@ -34,7 +34,7 @@ export default function HomePage() {
           <a href="/about">
             <Button label={t('home.aboutBtn')} />
           </a>
-          <a href="mailto:eva@example.com">
+          <a href="mailto:evalin8@gmail.com">
             <Button label={t('home.contactBtn')} />
           </a>
         </div>

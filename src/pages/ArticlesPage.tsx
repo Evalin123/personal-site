@@ -25,39 +25,13 @@ const articles: Article[] = [
     imageUrl: mcpServer,
   },
   {
-    id: 'retro-ui-design-tips',
-    title: 'Retro UI Design Tips for Modern Developers',
+    id: 'websocket-vs-http',
+    title: "WebSocket vs HTTP: What's the Difference and When to Use WebSocket?",
     excerpt:
-      'A guide to designing retro-style user interfaces with pastel colors and old computer aesthetics.',
-    publishedDate: '2025-02-05',
-    url: 'https://medium.com/@evalin8/retro-ui-design-tips',
-    imageUrl: undefined,
-  },
-  {
-    id: 'typescript-best-practices',
-    title: 'TypeScript Best Practices You Should Follow',
-    excerpt:
-      'Learn how to write cleaner and more maintainable TypeScript code with practical tips.',
-    publishedDate: '2025-03-12',
-    url: 'https://medium.com/@evalin8/typescript-best-practices',
-    imageUrl: undefined,
-  },
-  {
-    id: 'ai-in-web-dev',
-    title: 'AI in Web Development: Opportunities and Challenges',
-    excerpt:
-      'Exploring how AI tools can assist web developers, from code generation to project management.',
-    publishedDate: '2025-04-20',
-    url: 'https://medium.com/@evalin8/ai-in-web-dev',
-    imageUrl: undefined,
-  },
-  {
-    id: 'building-retro-components',
-    title: 'Building Retro Components with React and SCSS',
-    excerpt: 'Step-by-step guide to creating old computer style UI components in React.',
-    publishedDate: '2025-05-08',
-    url: 'https://medium.com/@evalin8/building-retro-components',
-    imageUrl: undefined,
+      "In today's highly connected and always-online world, we expect information to be available instantly. WebSocket is one of the key technologies that enables real-time communication between clients and servers.",
+    publishedDate: '2024-03-19',
+    url: 'https://medium.com/@evalin8/websocket-vs-http-whats-the-difference-and-when-to-use-websocket-e8f0b8c2cee2',
+    imageUrl: undefined, // 暫時不使用圖片
   },
 ];
 
