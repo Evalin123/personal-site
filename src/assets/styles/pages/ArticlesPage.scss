@@ -87,6 +87,37 @@
   margin-top: var(--space-sm);
 }
 
+/* Dark mode adjustments */
+[data-theme='dark'] {
+  .articles {
+    --articles-card-gradient: linear-gradient(135deg, #d3a78f 0%, #b985ad 50%, #c8a958 100%);
+  }
+
+  .articles__card {
+    background: var(--articles-card-gradient);
+    color: #2d2d2d;
+    box-shadow:
+      var(--shadow-outset),
+      inset 1px 1px rgba(255, 255, 255, 0.1),
+      inset -1px -1px rgba(0, 0, 0, 0.15);
+  }
+
+  .articles__title {
+    color: #1a1a1a;
+    font-weight: 700;
+  }
+
+  .articles__excerpt {
+    color: #2d2d2d;
+    opacity: 0.95;
+  }
+
+  .articles__meta {
+    color: #404040;
+    opacity: 0.9;
+  }
+}
+
 @media (max-width: 720px) {
   .articles__card {
     grid-template-columns: 1fr;

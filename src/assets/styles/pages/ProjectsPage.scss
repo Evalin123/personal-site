@@ -87,6 +87,18 @@
   }
 }
 
+/* Dark mode adjustments */
+[data-theme='dark'] {
+  .projects__tag {
+    background: #c4a6b8;
+    color: #ffffff;
+    border-color: #8a7884;
+    box-shadow:
+      inset 1px 1px rgba(255, 255, 255, 0.2),
+      1px 1px #8a7884;
+  }
+}
+
 @media (max-width: 640px) {
   .projects__grid {
     grid-template-columns: 1fr;

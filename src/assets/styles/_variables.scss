@@ -45,25 +45,40 @@
 
 /* Dark Theme Variables */
 [data-theme='dark'] {
-  --color-gray-light: #2a2a2a;
-  --color-gray: #404040;
-  --color-gray-dark: #cccccc;
+  /* Base grays - darker for better dark mode comfort */
+  --color-gray-light: #1a1a1a;
+  --color-gray: #2d2d2d;
+  --color-gray-dark: #e0e0e0;
+  --color-white: #0f0f0f;
 
-  --color-pastel-pink: #f3a7d6;
-  --color-pastel-blue: #8fb0ff;
-  --color-pastel-green: #9fd8b3;
-  --color-pastel-yellow: #ffd677;
+  /* Muted pastel colors for dark mode - less saturated and more comfortable */
+  --color-pastel-pink: #d4a5c7;
+  --color-pastel-blue: #7a9bdc;
+  --color-pastel-green: #8bc5a0;
+  --color-pastel-yellow: #d4c47a;
+  --color-pastel-purple: #b8a6d4;
+  --color-pastel-orange: #d4b396;
+  --color-pastel-white: #161616;
 
   --color-primary: var(--color-pastel-blue);
   --color-secondary: var(--color-pastel-pink);
   --color-accent: var(--color-pastel-green);
   --color-warning: var(--color-pastel-yellow);
 
-  --border-color: var(--color-gray-dark);
-  --shadow-inset: inset 2px 2px var(--color-gray-dark);
-  --shadow-outset: 2px 2px var(--color-gray-dark);
-  /* Subtle header background in dark mode */
-  --chrome-subtle: #4a4a55;
+  /* Dark mode surfaces - comfortable dark backgrounds */
+  --surface-lilac: #1f1a24;
+  --surface-mint: #1a2420;
+  --surface-butter: #242218;
+  --surface-mint-deep: #151e18;
+
+  /* Dark chrome styling */
+  --chrome-gradient: linear-gradient(90deg, #3a2d3a 0%, #2d2938 50%, #2d3440 100%);
+  --chrome-subtle: #252530;
+
+  /* Adjusted borders and shadows with softer contrast */
+  --border-color: #404040;
+  --shadow-inset: inset 2px 2px #404040;
+  --shadow-outset: 2px 2px #404040;
 }
 
 // SCSS Variables (for use in mixins and calculations)
