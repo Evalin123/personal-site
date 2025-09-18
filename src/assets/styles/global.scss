@@ -39,3 +39,15 @@ main {
   padding: var(--space-lg);
   background: var(--color-pastel-white);
 }
+
+// Layout component styles
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &--mobile-menu-open {
+    overflow: hidden;
+    height: 100vh;
+  }
+}

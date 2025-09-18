@@ -1,23 +1,20 @@
 import '@/assets/styles/components/Header.scss';
 
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
+
+import { useMobileMenuStore } from '@/stores/mobileMenuStore';
 
 import LanguageSwitcher from './LanguageSwitcher';
 import ThemeSwitcher from './ThemeSwitcher';
 
 export default function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isOpen: isMobileMenuOpen, toggle: toggleMobileMenu } = useMobileMenuStore();
   const { t } = useTranslation();
 
   const location = useLocation();
   const isActive = (path: string): boolean => {
     return location.pathname === path;
-  };
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -39,7 +36,11 @@ export default function Header() {
         </div>
         <div className="header__bottom-bar">
           <div className="header__logo">
-            <Link to="/" aria-current={isActive('/') ? 'page' : undefined}>
+            <Link
+              to="/"
+              aria-current={isActive('/') ? 'page' : undefined}
+              onClick={toggleMobileMenu}
+            >
               EVA
             </Link>
           </div>
@@ -104,6 +105,7 @@ export default function Header() {
               to="/about"
               className="header__mobile-nav-item"
               aria-current={isActive('/about') ? 'page' : undefined}
+              onClick={toggleMobileMenu}
             >
               {t('navigation.about')}
             </Link>
@@ -111,6 +113,7 @@ export default function Header() {
               to="/projects"
               className="header__mobile-nav-item"
               aria-current={isActive('/projects') ? 'page' : undefined}
+              onClick={toggleMobileMenu}
             >
               {t('navigation.projects')}
             </Link>
@@ -118,6 +121,7 @@ export default function Header() {
               to="/articles"
               className="header__mobile-nav-item"
               aria-current={isActive('/articles') ? 'page' : undefined}
+              onClick={toggleMobileMenu}
             >
               {t('navigation.articles')}
             </Link>
