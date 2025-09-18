@@ -2,6 +2,9 @@ import '@/assets/styles/pages/HomePage.scss';
 
 import { useTranslation } from 'react-i18next';
 
+import GithubIcon from '@/components/shared/icons/GithubIcon';
+import LinkedinIcon from '@/components/shared/icons/LinkedinIcon';
+
 import Button from '../components/shared/Button';
 
 export default function HomePage() {
@@ -31,11 +34,23 @@ export default function HomePage() {
         </h1>
         <p className="home__text">{t('home.subtitle')}</p>
         <div className="home__actions">
-          <a href="/about">
-            <Button label={t('home.aboutBtn')} />
+          <a href="https://github.com/Evalin123" target="_blank" rel="noreferrer">
+            <Button
+              label={
+                <>
+                  <GithubIcon size={18} /> <span>{t('home.githubBtn')}</span>
+                </>
+              }
+            />
           </a>
-          <a href="mailto:evalin8@gmail.com">
-            <Button label={t('home.contactBtn')} />
+          <a href="https://www.linkedin.com/in/eva-lin-9baa90214/" target="_blank" rel="noreferrer">
+            <Button
+              label={
+                <>
+                  <LinkedinIcon size={18} /> <span>{t('home.linkedinBtn')}</span>
+                </>
+              }
+            />
           </a>
         </div>
       </section>

@@ -10,8 +10,8 @@
   "home": {
     "title": "Hello, I'm {{name}}",
     "subtitle": "A passionate developer creating amazing web experiences",
-    "aboutBtn": "About Me",
-    "contactBtn": "Get In Touch",
+    "githubBtn": "GitHub",
+    "linkedinBtn": "LinkedIn",
     "whatIDo": "What I Do",
     "features": {
       "frontend": {

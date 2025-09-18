@@ -2,8 +2,7 @@ import '@/assets/styles/components/Footer.scss';
 
 import { useTranslation } from 'react-i18next';
 
-import GithubIcon from './shared/icons/GithubIcon';
-import LinkedinIcon from './shared/icons/LinkedinIcon';
+import MailIcon from './shared/icons/MailIcon';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -15,21 +14,10 @@ export default function Footer() {
       <div className="footer__icons">
         <a
           className="footer__icon"
-          href="https://github.com/Evalin123"
-          target="_blank"
-          rel="noreferrer"
-          aria-label={t('footer.links.github')}
+          href="mailto:evalin8@gmail.com"
+          aria-label={t('footer.links.email')}
         >
-          <GithubIcon size={16} />
-        </a>
-        <a
-          className="footer__icon"
-          href="https://www.linkedin.com/in/eva-lin-9baa90214/"
-          target="_blank"
-          rel="noreferrer"
-          aria-label={t('footer.links.linkedin')}
-        >
-          <LinkedinIcon size={16} />
+          <MailIcon size={16} />
         </a>
       </div>
     </footer>

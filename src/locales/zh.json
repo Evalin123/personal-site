@@ -10,8 +10,8 @@
   "home": {
     "title": "你好，我是 {{name}}",
     "subtitle": "熱愛開發的工程師，致力於創造優秀的網頁體驗",
-    "aboutBtn": "關於我",
-    "contactBtn": "聯絡我",
+    "githubBtn": "GitHub",
+    "linkedinBtn": "LinkedIn",
     "whatIDo": "我的專長",
     "features": {
       "frontend": {
