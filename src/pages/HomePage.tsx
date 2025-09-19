@@ -17,12 +17,12 @@ export default function HomePage() {
       description: t('home.features.frontend.description'),
     },
     {
-      title: t('home.features.performance.title'),
-      description: t('home.features.performance.description'),
+      title: t('home.features.backend.title'),
+      description: t('home.features.backend.description'),
     },
     {
-      title: t('home.features.fullstack.title'),
-      description: t('home.features.fullstack.description'),
+      title: t('home.features.growth.title'),
+      description: t('home.features.growth.description'),
     },
   ];
 

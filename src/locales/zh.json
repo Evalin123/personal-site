@@ -9,22 +9,22 @@
   },
   "home": {
     "title": "你好，我是 {{name}}",
-    "subtitle": "熱愛開發的工程師，致力於創造優秀的網頁體驗",
+    "subtitle": "前端開發者，喜歡用 React 和 TypeScript 打造可擴展的網頁應用，也在學習後端和一些新技術。",
     "githubBtn": "GitHub",
     "linkedinBtn": "LinkedIn",
     "whatIDo": "我的專長",
     "features": {
       "frontend": {
         "title": "前端開發",
-        "description": "使用現代技術打造美觀且響應式的使用者介面"
+        "description": "打造響應式且可擴展的網頁應用，注重乾淨的架構設計與使用者友善的介面。"
       },
-      "performance": {
-        "title": "效能優化",
-        "description": "建構快速、高效的應用程式，提供優秀的使用者體驗"
+      "backend": {
+        "title": "後端開發",
+        "description": "開發支付與報表等後端功能與 API，確保與管理後台的整合穩定可靠。"
       },
-      "fullstack": {
-        "title": "全端解決方案",
-        "description": "從前端到後端的完整網頁應用程式開發"
+      "growth": {
+        "title": "持續成長",
+        "description": "探索區塊鏈開發，不斷擴展技能，跟上新興技術的步伐。"
       }
     }
   },

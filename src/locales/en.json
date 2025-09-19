@@ -9,22 +9,22 @@
   },
   "home": {
     "title": "Hello, I'm {{name}}",
-    "subtitle": "A passionate developer creating amazing web experiences",
+    "subtitle": "Frontend Developer passionate about building scalable web apps with React and TypeScript, while exploring backend and emerging technologies.",
     "githubBtn": "GitHub",
     "linkedinBtn": "LinkedIn",
     "whatIDo": "What I Do",
     "features": {
       "frontend": {
         "title": "Frontend Development",
-        "description": "Creating beautiful, responsive user interfaces with modern technologies"
+        "description": "Building responsive and scalable web applications, focusing on clean architecture and user-friendly interfaces."
       },
-      "performance": {
-        "title": "Performance Optimization",
-        "description": "Building fast, efficient applications that provide excellent user experiences"
+      "backend": {
+        "title": "Product-Driven Backends",
+        "description": "Building APIs and backend features for payment and reporting, ensuring reliable integration with admin dashboards."
       },
-      "fullstack": {
-        "title": "Full Stack Solutions",
-        "description": "Developing complete web applications from frontend to backend"
+      "growth": {
+        "title": "Continuous Growth",
+        "description": "Exploring Blockchain development to broaden expertise and keep pace with emerging technologies."
       }
     }
   },
