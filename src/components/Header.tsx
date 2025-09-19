@@ -39,9 +39,13 @@ export default function Header() {
             <Link
               to="/"
               aria-current={isActive('/') ? 'page' : undefined}
-              onClick={toggleMobileMenu}
+              onClick={() => {
+                if (isMobileMenuOpen) {
+                  toggleMobileMenu();
+                }
+              }}
             >
-              EVA
+              Home ♥
             </Link>
           </div>
           <nav className="header__nav" aria-label="Primary Navigation">
