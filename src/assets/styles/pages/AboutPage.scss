@@ -35,7 +35,7 @@
 }
 
 .about__intro-paragraph {
-  margin: 0 0 var(--space-sm);
+  margin: 0 0 var(--space-md);
   font-family: var(--font-family-base);
   line-height: 1.65;
 }
@@ -50,6 +50,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
 .about__window-box {
@@ -74,7 +75,7 @@
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
   display: grid;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
 }
 
 .about__values-grid {
@@ -100,7 +101,7 @@
 
 .about__value-title {
   font-weight: 700;
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
 }
 
 .about__value-desc {

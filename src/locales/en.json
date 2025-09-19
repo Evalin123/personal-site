@@ -30,25 +30,26 @@
   },
   "about": {
     "title": "About Eva",
-    "subtitle": "Frontend Engineer • Pastel Retro UI Enthusiast",
+    "subtitle": "Full-stack Engineer (Frontend-Focused) • Team Lead Experience • Technology Explorer",
     "intro": {
       "heading": "Hello, I'm Eva",
-      "paragraph1": "I build clean, accessible interfaces with a soft spot for old-computer aesthetics and pastel color palettes.",
-      "paragraph2": "My focus is on clarity, maintainability, and thoughtful UX details that make apps feel friendly and fast."
+      "paragraph1": "I'm a <1>full-stack engineer</1> specializing in building scalable, accessible, and user-friendly interfaces, with a strong foundation in frontend development.",
+      "paragraph2": "With experience as a <1>team lead</1>, I care deeply about code quality, maintainability, and knowledge-sharing. Beyond work, I actively contribute to <1>open source</1>, publish <1>technical articles</1>, and constantly explore new tools and technologies to stay ahead.",
+      "paragraph3": "My goal is to deliver software that balances <1>clarity</1>, <1>performance</1>, and <1>long-term sustainability</1>, while creating a positive impact for both end-users and engineering teams."
     },
     "skills": {
       "title": "Skills",
       "frontend": {
         "title": "Frontend",
-        "items": ["React", "TypeScript", "SCSS", "Vite", "CSS Modules"]
+        "items": ["React", "TypeScript", "Next.js", "Tailwind CSS"]
       },
       "tools": {
         "title": "Tools",
-        "items": ["Git", "pnpm", "ESLint", "Prettier", "Vite"]
+        "items": ["Git", "pnpm", "ESLint", "Vite"]
       },
       "backend": {
         "title": "Backend",
-        "items": ["Node.js", "Express", "REST APIs", "Firebase"]
+        "items": ["Node.js", "Express", "REST APIs", "MongoDB"]
       }
     },
     "values": {
@@ -56,19 +57,19 @@
       "items": [
         {
           "title": "Clarity",
-          "description": "Readable code, simple flows, and UIs that explain themselves."
+          "description": "Write clean, maintainable code with simple, scalable flows."
         },
         {
-          "title": "Consistency",
-          "description": "Design tokens, shared primitives, and predictable patterns across features."
+          "title": "System Thinking",
+          "description": "Design scalable patterns from APIs to UI for long-term consistency."
         },
         {
-          "title": "Accessibility",
-          "description": "Keyboard-friendly, semantic HTML, and careful contrast by default."
+          "title": "Collaboration",
+          "description": "Work closely with cross-functional teams through clear specs and reviews."
         },
         {
-          "title": "Performance",
-          "description": "Ship fast UIs with sensible bundles, caching, and minimal re-renders."
+          "title": "Growth & Knowledge Sharing",
+          "description": "Keep learning, contribute to open source, and share insights with others."
         }
       ]
     }

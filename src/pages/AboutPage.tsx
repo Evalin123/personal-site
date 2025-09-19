@@ -1,6 +1,6 @@
 import '@/assets/styles/pages/AboutPage.scss';
 
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 export default function AboutPage() {
   const { t } = useTranslation();
@@ -17,10 +17,31 @@ export default function AboutPage() {
         <h2 id="intro-heading" className="about__intro-heading">
           {t('about.intro.heading')}
         </h2>
-        <p className="about__intro-paragraph">{t('about.intro.paragraph1')}</p>
-        <p className="about__intro-paragraph">{t('about.intro.paragraph2')}</p>
+        <p className="about__intro-paragraph">
+          <Trans
+            i18nKey="about.intro.paragraph1"
+            components={{
+              1: <strong />,
+            }}
+          />
+        </p>
+        <p className="about__intro-paragraph">
+          <Trans
+            i18nKey="about.intro.paragraph2"
+            components={{
+              1: <strong />,
+            }}
+          />
+        </p>
+        <p className="about__intro-paragraph">
+          <Trans
+            i18nKey="about.intro.paragraph3"
+            components={{
+              1: <strong />,
+            }}
+          />
+        </p>
       </section>
-
       <section className="skills" aria-labelledby="skills-title">
         <h2 id="skills-title" className="title">
           {t('about.skills.title')}
@@ -70,7 +91,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       <section className="values" aria-labelledby="values-title">
         <h2 id="values-title" className="title">
           {t('about.values.title')}
