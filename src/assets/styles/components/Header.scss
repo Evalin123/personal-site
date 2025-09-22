@@ -62,29 +62,35 @@
       animation: crt-refresh 0.8s ease-in-out;
     }
 
-    // 掃描線效果
+    // CRT 掃描線紋理效果
     &:hover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.05) 0px,
+        /* 白線 */ rgba(255, 255, 255, 0.05) 1px,
+        rgba(0, 0, 0, 0.15) 1px,
+        /* 黑線 */ rgba(0, 0, 0, 0.15) 2px
+      );
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    // 移動的掃描線效果
+    &:hover::after {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.05), transparent);
-      z-index: 3;
-      animation: scan-line 1s ease-in-out;
-      pointer-events: none;
-    }
-
-    &:hover::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, transparent, rgba(0, 0, 255, 0.05), transparent);
-      z-index: 3;
+      background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.9), transparent);
+      z-index: 4;
       animation: scan-line 1s ease-in-out;
       pointer-events: none;
     }
