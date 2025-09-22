@@ -1,5 +1,6 @@
 import '@/assets/styles/components/Header.scss';
 
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -11,10 +12,26 @@ import ThemeSwitcher from './ThemeSwitcher';
 export default function Header() {
   const { isOpen: isMobileMenuOpen, toggle: toggleMobileMenu } = useMobileMenuStore();
   const { t } = useTranslation();
+  const buttonRef = useRef<HTMLDivElement>(null);
 
   const location = useLocation();
   const isActive = (path: string): boolean => {
     return location.pathname === path;
+  };
+
+  const handleTouchStart = () => {
+    const el = buttonRef.current;
+    if (!el) return;
+
+    el.classList.remove('play-once');
+    void el.offsetWidth;
+    el.classList.add('play-once');
+
+    const handleAnimationEnd = () => {
+      el.classList.remove('play-once');
+      el.removeEventListener('animationend', handleAnimationEnd);
+    };
+    el.addEventListener('animationend', handleAnimationEnd);
   };
 
   return (
@@ -35,7 +52,7 @@ export default function Header() {
           </div>
         </div>
         <div className="header__bottom-bar">
-          <div className="header__logo">
+          <div ref={buttonRef} className="header__logo" onTouchStart={handleTouchStart}>
             <Link
               to="/"
               aria-current={isActive('/') ? 'page' : undefined}

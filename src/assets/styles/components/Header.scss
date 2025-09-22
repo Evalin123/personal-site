@@ -57,42 +57,81 @@
       transition: all variables.$transition-normal;
     }
 
-    // Hover 時的 CRT 刷新效果
-    &:hover a {
-      animation: crt-refresh 0.8s ease-in-out;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover a {
+        animation: crt-refresh 0.8s ease-in-out infinite;
+      }
+
+      &:hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: repeating-linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.05) 0px,
+          /* 白線 */ rgba(255, 255, 255, 0.05) 1px,
+          rgba(0, 0, 0, 0.15) 1px,
+          /* 黑線 */ rgba(0, 0, 0, 0.15) 2px
+        );
+        z-index: 3;
+        pointer-events: none;
+      }
+
+      // 移動的掃描線效果
+      &:hover::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.9), transparent);
+        z-index: 4;
+        animation: scan-line 1s ease-in-out infinite;
+        pointer-events: none;
+      }
     }
 
-    // CRT 掃描線紋理效果
-    &:hover::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: repeating-linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.05) 0px,
-        /* 白線 */ rgba(255, 255, 255, 0.05) 1px,
-        rgba(0, 0, 0, 0.15) 1px,
-        /* 黑線 */ rgba(0, 0, 0, 0.15) 2px
-      );
-      z-index: 3;
-      pointer-events: none;
-    }
+    @media (pointer: coarse) {
+      &.play-once {
+        a {
+          animation: crt-refresh 0.8s ease-in-out;
+        }
 
-    // 移動的掃描線效果
-    &:hover::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.9), transparent);
-      z-index: 4;
-      animation: scan-line 1s ease-in-out;
-      pointer-events: none;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: repeating-linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.05) 0px,
+            rgba(255, 255, 255, 0.05) 1px,
+            rgba(0, 0, 0, 0.15) 1px,
+            rgba(0, 0, 0, 0.15) 2px
+          );
+          z-index: 3;
+          pointer-events: none;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.9), transparent);
+          z-index: 4;
+          animation: scan-line 1s ease-in-out;
+          pointer-events: none;
+        }
+      }
     }
   }
 
