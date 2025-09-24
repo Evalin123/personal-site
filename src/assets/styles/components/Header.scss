@@ -187,8 +187,16 @@
     box-shadow: var(--shadow-outset);
     font-weight: 600;
 
-    &:hover {
-      box-shadow: var(--shadow-inset);
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: var(--shadow-inset);
+      }
+    }
+
+    @media (hover: none) {
+      &:active {
+        box-shadow: var(--shadow-inset);
+      }
     }
   }
 
@@ -206,7 +214,7 @@
     position: relative;
     justify-self: end; // 靠右對齊
 
-    &:hover {
+    &:active {
       box-shadow: var(--shadow-inset);
     }
 
