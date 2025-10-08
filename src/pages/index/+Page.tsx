@@ -2,10 +2,9 @@ import '@/assets/styles/pages/HomePage.scss';
 
 import { useTranslation } from 'react-i18next';
 
+import Button from '@/components/shared/Button';
 import GithubIcon from '@/components/shared/icons/GithubIcon';
 import LinkedinIcon from '@/components/shared/icons/LinkedinIcon';
-
-import Button from '../components/shared/Button';
 
 export default function HomePage() {
   const { t } = useTranslation();

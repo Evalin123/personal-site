@@ -2,7 +2,7 @@ import '@/assets/styles/pages/ProjectsPage.scss';
 
 import { useTranslation } from 'react-i18next';
 
-import Button from '../components/shared/Button';
+import Button from '@/components/shared/Button';
 
 type Project = {
   id: string;
