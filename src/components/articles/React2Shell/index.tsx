@@ -620,6 +620,32 @@ main();`}</code>
             <li>React RSC 是一個強大但非常複雜的系統，理解其序列化/反序列化模型對安全性至關重要</li>
           </ul>
         </section>
+
+        <section className="react2shell__section">
+          <h2 className="react2shell__heading">References</h2>
+          <ul className="react2shell__list">
+            <li>
+              <a
+                href="https://github.com/lachlan2k/React2Shell-CVE-2025-55182-original-poc"
+                target="_blank"
+                rel="noreferrer"
+                className="react2shell__link"
+              >
+                PoCs for CVE-2025-55182 (React2Shell)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/facebook/react/pull/35277"
+                target="_blank"
+                rel="noreferrer"
+                className="react2shell__link"
+              >
+                React Pull Request #35277 - Security Fix
+              </a>
+            </li>
+          </ul>
+        </section>
       </div>
     </article>
   );
