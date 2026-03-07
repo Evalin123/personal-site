@@ -1,31 +1,97 @@
 @use '../_variables.scss';
 
-.projects {
+.projects-section {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.projects__tabs {
+  display: flex;
+  gap: var(--space-xs);
+  margin-bottom: -2px; // Overlap with container border
+}
+
+.projects__tab {
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-family-base);
+  font-size: 18px;
+  font-weight: 600;
+  background: var(--color-white);
+  border: var(--border-width) solid var(--border-color);
+  border-bottom: none; // Remove bottom border for folder effect
+  border-radius: 8px 8px 0 0; // Rounded top corners only
+  box-shadow: 2px -1px var(--color-gray-dark); // Shadow on top and sides
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    background: var(--surface-lilac);
+  }
+}
+
+.projects__tab--active {
+  background: var(--color-pastel-purple);
+  font-weight: 600;
+  z-index: 2;
+  box-shadow:
+    2px -1px var(--color-gray-dark),
+    -2px 0 0 0 var(--color-white); // Connect to container
+
+  &:hover {
+    background: var(--color-pastel-purple);
+  }
+
+  // Add a white bottom edge to cover the container's top border
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--color-pastel-purple);
+  }
+}
+
+.projects {
+  width: 100%;
+  min-height: 500px; // Fixed minimum height
   padding: var(--space-lg);
   background: var(--color-white);
   border: var(--border-width) solid var(--border-color);
   box-shadow: var(--shadow-outset);
-}
-
-.title {
-  margin: 0 0 var(--space-md);
-  font-family: var(--font-family-base);
-  font-weight: 700;
+  position: relative;
+  z-index: 1;
 }
 
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-lg);
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .projects__card {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+  height: 320px; // Fixed height for all cards
   background: var(--surface-mint-deep);
   border: var(--border-width) solid var(--border-color);
   box-shadow:
@@ -38,7 +104,7 @@
     background-color 0.2s ease;
 }
 
-.projects__header {
+.projects__card-header {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
@@ -58,6 +124,11 @@
   margin: 0;
   font-family: var(--font-family-base);
   font-size: 14px;
+  line-height: 1.5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; // Limit to 3 lines
+  -webkit-box-orient: vertical;
 }
 
 .projects__tags {
@@ -97,10 +168,28 @@
       inset 1px 1px rgba(255, 255, 255, 0.2),
       1px 1px #8a7884;
   }
+
+  .projects__tab--active {
+    background: #dfd0ff;
+    color: #333;
+  }
 }
 
 @media (max-width: 640px) {
   .projects__grid {
     grid-template-columns: 1fr;
+  }
+
+  .projects__tabs {
+    width: 100%;
+  }
+
+  .projects__tab {
+    flex: 1;
+    text-align: center;
+  }
+
+  .projects {
+    min-height: 500px; // Smaller height on mobile
   }
 }

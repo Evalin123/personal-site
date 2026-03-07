@@ -1,8 +1,11 @@
 import '@/assets/styles/pages/ProjectsPage.scss';
 
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Button from '../components/shared/Button';
+
+type ProjectCategory = 'playground' | 'deepDive';
 
 type Project = {
   id: string;
@@ -11,6 +14,7 @@ type Project = {
   tags: string[];
   githubUrl: string;
   icon?: string;
+  category: ProjectCategory;
 };
 
 const projects: Project[] = [
@@ -22,6 +26,7 @@ const projects: Project[] = [
     tags: ['TypeScript', 'AI', 'Health Tech', 'LINE Bot', 'Motia Framework'],
     githubUrl: 'https://github.com/Evalin123/health-fitness-agent',
     icon: '💪',
+    category: 'deepDive',
   },
   {
     id: 'mcp-gitlab-server',
@@ -31,6 +36,7 @@ const projects: Project[] = [
     tags: ['TypeScript', 'Node.js', 'GitLab API', 'MCP'],
     githubUrl: 'https://github.com/Evalin123/mcp-gitlab-server',
     icon: '🔧',
+    category: 'deepDive',
   },
   {
     id: 'charberry',
@@ -39,6 +45,7 @@ const projects: Project[] = [
     tags: ['React', 'TypeScript', 'Frontend'],
     githubUrl: 'https://github.com/Evalin123/charberry',
     icon: '🍓',
+    category: 'playground',
   },
   {
     id: 'pikto-ui',
@@ -47,6 +54,7 @@ const projects: Project[] = [
     tags: ['React', 'UI Library', 'Components', 'Accessibility'],
     githubUrl: 'https://github.com/Evalin123/pikto-ui',
     icon: '🎨',
+    category: 'deepDive',
   },
   {
     id: 'weather-forecast',
@@ -55,43 +63,71 @@ const projects: Project[] = [
     tags: ['JavaScript', 'Weather API', 'Frontend', 'Responsive'],
     githubUrl: 'https://github.com/Evalin123/weather-forecast',
     icon: '🌤️',
+    category: 'playground',
   },
 ];
 
 export default function ProjectsPage() {
   const { t } = useTranslation();
+  const [activeTab, setActiveTab] = useState<ProjectCategory>('deepDive');
+
+  const filteredProjects = projects.filter((project) => project.category === activeTab);
 
   return (
-    <section className="projects" aria-labelledby="projects-title">
-      <h1 id="projects-title" className="title">
-        {t('projects.title')}
+    <section className="projects-section" aria-labelledby="projects-title">
+      <h1 id="projects-title" className="visually-hidden">
+        {t(`projects.tabs.${activeTab}`)}
       </h1>
-      <div className="projects__grid">
-        {projects.map((project) => (
-          <article key={project.id} className="projects__card">
-            <header className="projects__header">
-              {project.icon ? (
-                <span className="projects__icon" aria-hidden>
-                  {project.icon}
-                </span>
-              ) : null}
-              <h2 className="projects__name">{project.name}</h2>
-            </header>
-            <p className="projects__description">{project.description}</p>
-            <div className="projects__tags">
-              {project.tags.map((tag) => (
-                <span className="projects__tag" key={tag}>
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <div className="projects__actions">
-              <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                <Button label={t('projects.viewOnGithub')} />
-              </a>
-            </div>
-          </article>
-        ))}
+      <div className="projects__tabs" role="tablist" aria-label="Project categories">
+        <button
+          type="button"
+          role="tab"
+          aria-selected={activeTab === 'playground'}
+          aria-controls="projects-content"
+          className={`projects__tab ${activeTab === 'playground' ? 'projects__tab--active' : ''}`}
+          onClick={() => setActiveTab('playground')}
+        >
+          {t('projects.tabs.playground')}
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={activeTab === 'deepDive'}
+          aria-controls="projects-content"
+          className={`projects__tab ${activeTab === 'deepDive' ? 'projects__tab--active' : ''}`}
+          onClick={() => setActiveTab('deepDive')}
+        >
+          {t('projects.tabs.deepDive')}
+        </button>
+      </div>
+      <div id="projects-content" className="projects" role="tabpanel">
+        <div className="projects__grid">
+          {filteredProjects.map((project) => (
+            <article key={project.id} className="projects__card">
+              <header className="projects__card-header">
+                {project.icon ? (
+                  <span className="projects__icon" aria-hidden>
+                    {project.icon}
+                  </span>
+                ) : null}
+                <h2 className="projects__name">{project.name}</h2>
+              </header>
+              <p className="projects__description">{project.description}</p>
+              <div className="projects__tags">
+                {project.tags.map((tag) => (
+                  <span className="projects__tag" key={tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div className="projects__actions">
+                <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                  <Button label={t('projects.viewOnGithub')} />
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

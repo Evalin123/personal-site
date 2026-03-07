@@ -94,7 +94,11 @@
     "title": "My Projects",
     "subtitle": "Explore my side projects and open-source contributions",
     "openProject": "Open project",
-    "viewOnGithub": "View on GitHub"
+    "viewOnGithub": "View on GitHub",
+    "tabs": {
+      "playground": "Playground",
+      "deepDive": "Deep Dive"
+    }
   },
   "articles": {
     "title": "My Articles",

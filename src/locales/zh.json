@@ -94,7 +94,11 @@
     "title": "我的專案",
     "subtitle": "探索我的個人專案和開源貢獻",
     "openProject": "開啟專案",
-    "viewOnGithub": "在 GitHub 上查看"
+    "viewOnGithub": "在 GitHub 上查看",
+    "tabs": {
+      "playground": "練習場",
+      "deepDive": "深度研究"
+    }
   },
   "articles": {
     "title": "我的文章",
