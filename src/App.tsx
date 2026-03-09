@@ -4,9 +4,10 @@ import Layout from './components/Layout';
 import AboutPage from './pages/AboutPage';
 import ArticlesPage from './pages/ArticlesPage';
 import HomePage from './pages/HomePage';
+import MCPServerPage from './pages/MCPServerPage';
 import ProjectsPage from './pages/ProjectsPage';
 import React2ShellPage from './pages/React2ShellPage';
-import MCPServerPage from './pages/MCPServerPage';
+import WebSocketPage from './pages/WebSocketPage';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="articles" element={<ArticlesPage />} />
           <Route path="articles/React2Shell-CVE-2025-55182" element={<React2ShellPage />} />
           <Route path="articles/mcp-server" element={<MCPServerPage />} />
+          <Route path="articles/websocket-vs-http" element={<WebSocketPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
