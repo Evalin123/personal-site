@@ -128,6 +128,7 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3; // Limit to 3 lines
+  line-clamp: 3; // Standard property for compatibility
   -webkit-box-orient: vertical;
 }
 
