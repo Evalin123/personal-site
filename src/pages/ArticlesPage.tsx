@@ -33,8 +33,9 @@ const articles: Article[] = [
     excerpt:
       'Exploring the capabilities of AI in software development by building a Model Context Protocol (MCP) server. Can AI truly understand the complete development workflow from coding to committing?',
     publishedDate: '2025-01-11',
-    url: 'https://medium.com/@evalin8/ai-can-code-but-can-it-commit-building-an-mcp-server-to-find-out-39f2209c5f5c',
+    url: '/articles/mcp-server',
     imageUrl: mcpServer,
+    isInternal: true,
   },
   {
     id: 'websocket-vs-http',
