@@ -4,10 +4,10 @@ import Layout from './components/Layout';
 import AboutPage from './pages/AboutPage';
 import ArticlesPage from './pages/ArticlesPage';
 import HomePage from './pages/HomePage';
-import MCPServerPage from './pages/MCPServerPage';
 import ProjectsPage from './pages/ProjectsPage';
-import React2ShellPage from './pages/React2ShellPage';
-import WebSocketPage from './pages/WebSocketPage';
+import MCPServerPage from './pages/articles/MCPServerPage';
+import React2ShellPage from './pages/articles/React2ShellPage';
+import WebSocketPage from './pages/articles/WebSocketPage';
 
 export default function App() {
   return (
