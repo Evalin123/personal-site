@@ -155,11 +155,19 @@
 
   p {
     margin: 0 0 var(--space-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
   }
 
   a {
     font-size: 1.1rem;
     font-weight: 600;
+  }
+
+  svg {
+    flex-shrink: 0;
   }
 }
 

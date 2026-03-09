@@ -1,5 +1,7 @@
 import '@/assets/styles/components/articles/WebSocket.scss';
 
+import BookIcon from '@/components/shared/icons/BookIcon';
+
 export default function WebSocket() {
   return (
     <article className="websocket">
@@ -259,7 +261,8 @@ setTimeout(() => {
           <hr className="websocket__divider" />
           <div className="websocket__external-link">
             <p>
-              <strong>📝 Read the original article on Medium:</strong>
+              <BookIcon size={16} />
+              <strong>Read the original article on Medium:</strong>
             </p>
             <a
               href="https://medium.com/@evalin8/websocket-vs-http-whats-the-difference-and-when-to-use-websocket-e8f0b8c2cee2"

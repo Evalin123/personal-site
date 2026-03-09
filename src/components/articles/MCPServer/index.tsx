@@ -1,5 +1,7 @@
 import '@/assets/styles/components/articles/MCPServer.scss';
 
+import BookIcon from '@/components/shared/icons/BookIcon';
+
 export default function MCPServer() {
   return (
     <article className="mcpserver">
@@ -513,7 +515,8 @@ main().catch(console.error);`}</code>
           <hr className="mcpserver__divider" />
           <div className="mcpserver__external-link">
             <p>
-              <strong>📝 Read the original article on Medium:</strong>
+              <BookIcon size={16} />
+              <strong>Read the original article on Medium:</strong>
             </p>
             <a
               href="https://ai.plainenglish.io/ai-can-code-but-can-it-commit-building-an-mcp-server-to-find-out-39f2209c5f5c"
